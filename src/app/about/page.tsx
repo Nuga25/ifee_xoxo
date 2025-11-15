@@ -46,17 +46,17 @@ const aboutPage = () => {
         className="absolute -bottom-40 -left-10 w-[50px] sm:w-[110px] opacity-30"
       />
 
-      <div className="flex justify-between items-center px-32 w-full">
+      <div className="flex lg:flex-row flex-col gap-20 justify-between items-center px-5 sm:px-32 w-full">
         <div className="flex-[1.2]">
-          <h2 className="font-semibold text-[32px] flex items-center mb-6">
+          <h2 className="font-semibold text-[24px] lg:text-[32px] flex items-center mb-6">
             <span className="text-my-primary">#</span>about-me{" "}
             <span className="ml-6">
               <Image
                 src="/assets/line.png"
                 alt="line"
-                width={32}
+                width={22}
                 height={1}
-                className="w-60 h-[0.5px]"
+                className="sm:60 w-32 h-[0.5px]"
               />
             </span>
           </h2>
@@ -74,13 +74,13 @@ const aboutPage = () => {
             an art form.
           </p>
         </div>
-        <div className="flex-1 justify-self-end">
+        <div className="flex-1 flex justify-center">
           <Image
             src="/images/my-picture-.png"
             alt="my portrait"
             width={300}
             height={270}
-            className="ml-56 mt-6"
+            className=" sm:mt-6 mt-14"
           />
         </div>
       </div>

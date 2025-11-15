@@ -16,7 +16,7 @@ const Button: React.FC<GlassButtonProps> = ({
       type={type}
       onClick={onClick}
       className="
-        relative w-[200px] md:w-auto px-4 py-2 md:px-8 md:py-4
+        relative w-[180px] md:w-auto px-4 py-2 md:px-8 md:py-4
         rounded-full border border-white/20
         bg-white/5 backdrop-blur-sm
         text-white font-semibold

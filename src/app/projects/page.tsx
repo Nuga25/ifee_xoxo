@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const projectsPage = () => {
   return (
-    <section className="space-y-16 my-40 px-32 relative">
+    <section id="projects" className="space-y-16 my-40 px-5 sm:px-32 relative">
       <Image
         src="/assets/dots-small.svg"
         alt="Background pattern"
         width={80}
         height={80}
-        className="absolute top-16 right-60 w-10 sm:w-16"
+        className="absolute top-16 md:right-60 right-10 w-10 sm:w-16"
       />
       <Image
         src="/assets/ellipse-large.png"
@@ -20,7 +20,7 @@ const projectsPage = () => {
       />
 
       <div>
-        <h2 className="font-semibold text-[32px] flex items-center mb-6">
+        <h2 className="font-semibold text-[24px] lg:text-[32px] flex items-center mb-6">
           <span className="text-my-primary">#</span>projects/achievements{" "}
           <span className="ml-6">
             <Image
@@ -28,20 +28,20 @@ const projectsPage = () => {
               alt="line"
               width={32}
               height={1}
-              className="w-60 h-[0.5px]"
+              className="sm:w-60 w-32 h-[0.5px]"
             />
           </span>
         </h2>
 
-        <div className="flex justify-between w-[70%] mx-auto my-16">
+        <div className="flex justify-between w-[100%] lg:w-[70%] mx-auto my-16 text-[14px] lg:text-[18px] gap-3">
           <Button>Projects</Button>
           <Button>Achievements</Button>
         </div>
 
-        <div className="flex justify-between items-center w-[90%] mx-auto">
-          <div className="h-[260px] w-[220px] bg-my-primary"></div>
-          <div className="h-[260px] w-[220px] bg-my-primary"></div>
-          <div className="h-[260px] w-[220px] bg-my-primary"></div>
+        <div className="flex flex-col sm:flex-row justify-between items-center w-[95%] gap-3 sm:w-[90%] mx-auto">
+          <div className="h-[260px] w-[300px] bg-my-primary"></div>
+          <div className="h-[260px] w-[300px] bg-my-primary"></div>
+          <div className="h-[260px] w-[300px] bg-my-primary"></div>
         </div>
         <p className="flex justify-end my-10 mr-10">
           view all{" "}

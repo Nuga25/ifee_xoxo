@@ -62,7 +62,7 @@ export default function Home() {
       <Image
         src="/assets/pattern-small.svg"
         alt="Background pattern"
-        className="absolute top-64 right-0 w-10 sm:w-16"
+        className="absolute top-64 right-0 w-10 sm:w-16 opacity-30"
         width={80}
         height={80}
       />
@@ -97,7 +97,7 @@ export default function Home() {
 
       <section className="relative z-10">
         <header>
-          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 flex items-center justify-between w-[90%] sm:w-[70%] md:w-[55%] h-14 sm:h-20 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm font-semibold shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]">
+          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 flex items-center justify-between w-[90%] sm:w-[70%] md:w-[55%] h-14 sm:h-16 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm font-semibold shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]">
             <Image
               src="/assets/logo.svg"
               alt="Logo"
@@ -107,9 +107,12 @@ export default function Home() {
             />
 
             <div>
-              <ul className="flex gap-4 sm:gap-6 md:gap-8 text-text-light font-bold text-[14px] sm:text-[18px] md:text-[22px]">
+              <ul className="flex gap-4 sm:gap-6 md:gap-8 text-white font-semibold text-[14px] sm:text-[18px]">
                 <li>
-                  <a href="">
+                  <a
+                    href="#home"
+                    className="hover:underline hover:text-my-primary"
+                  >
                     <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
@@ -117,7 +120,10 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a
+                    href="#about"
+                    className="hover:underline hover:text-my-primary"
+                  >
                     <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
@@ -125,7 +131,10 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a
+                    href="#projects"
+                    className="hover:underline hover:text-my-primary"
+                  >
                     <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
@@ -133,7 +142,10 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a
+                    href="#contact"
+                    className="hover:underline hover:text-my-primary"
+                  >
                     <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
@@ -150,7 +162,7 @@ export default function Home() {
             <div className="flex flex-col justify-center">
               <div className="text-center mt-[40vh]">
                 <h3 className="font-bold text-[20px] sm:text-[28px] md:text-[30px]">
-                  Hi, i&apos;m{" "}
+                  Hi, I&apos;m{" "}
                   <span className="text-my-primary">Ifeoluwa Osinuga</span>
                 </h3>
                 <h1 className="font-bold text-[30px] sm:text-[40px] md:text-[50px] mt-5">
@@ -173,7 +185,7 @@ export default function Home() {
                   alt="arrow icon"
                   width={30}
                   height={30}
-                  className="sm:w-[60px] animate-bounce cursor-pointer"
+                  className="sm:w-[60px] sm:block hidden animate-bounce cursor-pointer"
                 />
               </a>
 
@@ -216,7 +228,7 @@ export default function Home() {
               alt="line"
               width={2}
               height={0}
-              className="h-48"
+              className="sm:h-48 h-96 opacity-40"
             />
           </div>
 

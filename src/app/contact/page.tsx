@@ -2,20 +2,23 @@ import Image from "next/image";
 
 const contactPage = () => {
   return (
-    <section className="space-y-16 my-40 px-32 relative">
+    <section
+      id="contact"
+      className="space-y-16 mt-40 mb-20 px-5 sm:px-32 relative"
+    >
       <Image
         src="/assets/dots-large.svg"
         alt="Background pattern"
         width={80}
         height={80}
-        className="absolute top-96 left-0 w-20 sm:w-60"
+        className="absolute top-[460px] md:top-96 -left-10 md:left-0 w-36 sm:w-60"
       />
       <Image
         src="/assets/pattern-big.svg"
         alt="Background pattern"
         width={80}
         height={80}
-        className="absolute -top-14 -right-10 w-20 sm:w-32 opacity-80"
+        className="absolute -top-14 -right-10 w-20 sm:w-32 opacity-40"
       />
       <Image
         src="/assets/ellipse-large.png"
@@ -26,7 +29,7 @@ const contactPage = () => {
       />
 
       <div>
-        <h2 className="font-semibold text-[32px] flex items-center mb-6">
+        <h2 className="font-semibold text-[24px] lg:text-[32px] flex items-center mb-6">
           <span className="text-my-primary">#</span>contact-me{" "}
           <span className="ml-6">
             <Image
@@ -34,12 +37,12 @@ const contactPage = () => {
               alt="line"
               width={32}
               height={1}
-              className="w-60 h-[0.5px]"
+              className="w-32 sm:w-60 h-[0.5px]"
             />
           </span>
         </h2>
 
-        <div className="flex justify-between gap-20 mt-20">
+        <div className="flex flex-col lg:flex-row justify-between gap-20 mt-20">
           <form
             action="#"
             className="flex flex-col flex-1 gap-4 px-4 sm:px-8 py-3 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]"
