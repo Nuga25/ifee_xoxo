@@ -25,7 +25,7 @@ const Button: React.FC<GlassButtonProps> = ({
         hover:border-purple-400/50
         active:shadow-[0_0_40px_#c779dd]
         active:scale-95
-        shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4)]
+        shadow-[inset_1px_1px_2px_rgba(255,255,255,0.8)]
       "
     >
       <span className="text-my-primary">{"{ "}</span>

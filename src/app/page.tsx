@@ -3,7 +3,10 @@
 import { useState, useEffect } from "react";
 import Button from "@/components/Button";
 import FloatingRobot from "@/components/FloatingRobot";
+import aboutPage from "@/app/about/page";
 import Image from "next/image";
+import projectsPage from "./projects/page";
+import contactPage from "./contact/page";
 
 const titles = [
   "<Software Engineer/>",
@@ -94,7 +97,7 @@ export default function Home() {
 
       <section className="relative z-10">
         <header>
-          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between w-[90%] sm:w-[70%] md:w-[55%] h-14 sm:h-20 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm font-semibold shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4)]">
+          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 flex items-center justify-between w-[90%] sm:w-[70%] md:w-[55%] h-14 sm:h-20 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm font-semibold shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]">
             <Image
               src="/assets/logo.svg"
               alt="Logo"
@@ -107,7 +110,7 @@ export default function Home() {
               <ul className="flex gap-4 sm:gap-6 md:gap-8 text-text-light font-bold text-[14px] sm:text-[18px] md:text-[22px]">
                 <li>
                   <a href="">
-                    <span className="text-my-primary text-[18px] sm:text-[25px]">
+                    <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
                     home
@@ -115,7 +118,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a href="">
-                    <span className="text-my-primary text-[18px] sm:text-[25px]">
+                    <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
                     about
@@ -123,7 +126,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a href="">
-                    <span className="text-my-primary text-[18px] sm:text-[25px]">
+                    <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
                     projects
@@ -131,7 +134,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a href="">
-                    <span className="text-my-primary text-[18px] sm:text-[25px]">
+                    <span className="text-my-primary text-[18px] sm:text-[22px]">
                       #
                     </span>
                     contact
@@ -143,9 +146,9 @@ export default function Home() {
         </header>
 
         <main className="text-white min-h-screen px-4 sm:px-8">
-          <section className="max-h-[100vh]" id="home">
-            <div className="min-h-[73vh] md:min-h-[60vh] h-full flex flex-col justify-center mt-24">
-              <div className="text-center pt-28 sm:pt-36">
+          <section className="h-screen flex flex-col justify-between" id="home">
+            <div className="flex flex-col justify-center">
+              <div className="text-center mt-[40vh]">
                 <h3 className="font-bold text-[20px] sm:text-[28px] md:text-[30px]">
                   Hi, i&apos;m{" "}
                   <span className="text-my-primary">Ifeoluwa Osinuga</span>
@@ -159,25 +162,20 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-between items-end relative gap-2 sm:gap-0">
-              {/* Left: buttons */}
-              <div className="flex flex-col gap-3 sm:ml-6">
-                <Button>Download CV</Button>
-                <Button>View Projects</Button>
-              </div>
+            <div className="flex justify-between items-end gap-2 sm:gap-0 pb-4">
+              {/* Left: CV button */}
+              <Button>Download CV</Button>
 
               {/* Center: arrow */}
-              <div className="sticky bottom-2 ">
-                <a href="#about">
-                  <Image
-                    src="/assets/arrow.svg"
-                    alt="arrow icon"
-                    width={30}
-                    height={30}
-                    className="sm:w-[60px] animate-bounce cursor-pointer z-10"
-                  />
-                </a>
-              </div>
+              <a href="#about">
+                <Image
+                  src="/assets/arrow.svg"
+                  alt="arrow icon"
+                  width={30}
+                  height={30}
+                  className="sm:w-[60px] animate-bounce cursor-pointer"
+                />
+              </a>
 
               {/* Right: robot + button */}
               <div className="sm:mr-6">
@@ -186,66 +184,29 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="about" className="relative min-h-[100vh]">
-            <Image
-              src="/assets/line-horizontal.png"
-              alt="line"
-              width={0}
-              height={0}
-              className="w-96 h-[0.5px] sm:w-96 mx-auto mt-32 mb-36"
-            />
+          {/* ABOUT ME SECTION */}
+          <section>{aboutPage()}</section>
 
-            <div className="flex justify-between items-center px-32 w-full">
-              <div className="flex-[1.2]">
-                <h2 className="font-semibold text-[32px] flex items-center mb-6">
-                  <span className="text-my-primary">#</span>about-me{" "}
-                  <span className="ml-6">
-                    <Image
-                      src="/assets/line.png"
-                      alt="line"
-                      width={32}
-                      height={1}
-                      className="w-60 h-[0.5px]"
-                    />
-                  </span>
-                </h2>
-                <p>
-                  I&apos;m a creative technologist and front-end developer who
-                  loves transforming ideas into interactive digital experiences.
-                  My work blends art and logic — crafting clean code wrapped in
-                  thoughtful design.
-                  <br /> <br /> I&apos;m passionate about building interfaces
-                  that not only look beautiful but feel alive, combining sleek
-                  aesthetics with smooth user interactions. <br /> <br />
-                  Whether it&apos;s experimenting with motion, optimizing for
-                  accessibility, or designing for the future web, I approach
-                  every project with curiosity, precision, and a deep love for
-                  technology as an art form.
-                </p>
-              </div>
-              <div className="flex-1 justify-self-end">
-                <Image
-                  src="/images/my-picture-.png"
-                  alt="my portrait"
-                  width={300}
-                  height={270}
-                  className="ml-56 mt-6"
-                />
-              </div>
-            </div>
+          {/* PROJECTS SECTION */}
+          <section>{projectsPage()}</section>
 
-            <div className="absolute top-[600px] left-1/2 transform -translate-x-1/2 mx-auto w-[70%] px-4 sm:px-8 py-3 sm:py-4 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm font-semibold shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4)]">
-              <p className="text-[22px]">
-                <span className="text-my-primary text-[26px]">/</span>skills
-              </p>
-              <div className="flex flex-wrap gap-3 text-[14px] font-light mt-5">
-                <p className="px-2 sm:px-3 py-1 sm:py-2 flex items-center justify-between rounded-full bg-white/5 backdrop-blur-sm shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4)]">
-                  React.js
-                </p>
-              </div>
-            </div>
-          </section>
+          {/* CONTACT SECTION */}
+          <section>{contactPage()}</section>
         </main>
+
+        <footer className="text-center py-3">
+          <small className="text-white text-[10px]">
+            Designed and Coded by{" "}
+            <a
+              href="https://www.linkedin.com/in/osinugaifeoluwa"
+              target="_blank"
+              className="underline text-my-primary"
+            >
+              ifee.xoxo
+            </a>
+            . Copyright &copy; 2025
+          </small>
+        </footer>
 
         {/* social links */}
         <div className="fixed top-0 left-3 sm:left-6 z-20">
@@ -255,7 +216,7 @@ export default function Home() {
               alt="line"
               width={2}
               height={0}
-              className="h-52"
+              className="h-48"
             />
           </div>
 
@@ -266,7 +227,7 @@ export default function Home() {
                 alt="GitHub"
                 width={35}
                 height={35}
-                className="sm:w-[50px]"
+                className="sm:w-[45px]"
               />
             </a>
             <a
@@ -278,7 +239,7 @@ export default function Home() {
                 alt="LinkedIn"
                 width={35}
                 height={35}
-                className="sm:w-[50px]"
+                className="sm:w-[45px]"
               />
             </a>
             <a href="mailto:osinugaifeoluwa1@gmail.com" target="_blank">
@@ -287,7 +248,7 @@ export default function Home() {
                 alt="Gmail"
                 width={35}
                 height={35}
-                className="sm:w-[50px]"
+                className="sm:w-[45px]"
               />
             </a>
             <a href="https://wa.me/+2349160591907" target="_blank">
@@ -296,7 +257,7 @@ export default function Home() {
                 alt="WhatsApp"
                 width={35}
                 height={35}
-                className="sm:w-[50px]"
+                className="sm:w-[45px]"
               />
             </a>
           </div>
