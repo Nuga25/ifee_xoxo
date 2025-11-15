@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 import FloatingRobot from "@/components/FloatingRobot";
 import aboutPage from "@/app/about/page";
 import Image from "next/image";
-import projectsPage from "./projects/page";
+import ProjectsPage from "./projects/page";
 import contactPage from "./contact/page";
 
 const titles = [
@@ -157,7 +157,7 @@ export default function Home() {
 
             {/* Mobile dropdown */}
             <ul
-              className={`md:hidden fixed top-16 right-4 w-[100%] bg-bg-dark border border-my-primary/40 backdrop-blur-md rounded-xl p-4 flex flex-col gap-4 text-white font-semibold transition-all duration-300 overflow-hidden ${
+              className={`md:hidden fixed top-16 right-4 w-[92%] bg-bg-dark border border-my-primary/40 backdrop-blur-md rounded-xl p-4 flex flex-col gap-4 text-white font-semibold transition-all duration-300 overflow-hidden ${
                 isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
@@ -220,7 +220,7 @@ export default function Home() {
           <section>{aboutPage()}</section>
 
           {/* PROJECTS SECTION */}
-          <section>{projectsPage()}</section>
+          <section>{ProjectsPage()}</section>
 
           {/* CONTACT SECTION */}
           <section>{contactPage()}</section>
@@ -248,7 +248,7 @@ export default function Home() {
               alt="line"
               width={2}
               height={0}
-              className="sm:h-48 h-96 opacity-40"
+              className="sm:h-48 h-64 opacity-40"
             />
           </div>
 
@@ -259,7 +259,7 @@ export default function Home() {
                 alt="GitHub"
                 width={35}
                 height={35}
-                className="sm:w-[45px]"
+                className="sm:w-[45px] hover:scale-110 transition-all"
               />
             </a>
             <a
@@ -271,7 +271,7 @@ export default function Home() {
                 alt="LinkedIn"
                 width={35}
                 height={35}
-                className="sm:w-[45px]"
+                className="sm:w-[45px] hover:scale-110 transition-all"
               />
             </a>
             <a href="mailto:osinugaifeoluwa1@gmail.com" target="_blank">
@@ -280,7 +280,7 @@ export default function Home() {
                 alt="Gmail"
                 width={35}
                 height={35}
-                className="sm:w-[45px]"
+                className="sm:w-[45px] hover:scale-110 transition-all"
               />
             </a>
             <a href="https://wa.me/+2349160591907" target="_blank">
@@ -289,7 +289,7 @@ export default function Home() {
                 alt="WhatsApp"
                 width={35}
                 height={35}
-                className="sm:w-[45px]"
+                className="sm:w-[45px] hover:scale-110 transition-all"
               />
             </a>
           </div>

@@ -45,7 +45,7 @@ const contactPage = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-20 mt-20">
           <form
             action="#"
-            className="flex flex-col flex-1 gap-4 px-4 sm:px-8 py-3 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]"
+            className="flex flex-col flex-1 gap-4 px-4 sm:px-8 py-8 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]"
           >
             <div className="flex flex-col w-[100%]">
               <label
@@ -106,7 +106,7 @@ const contactPage = () => {
             </button>
           </form>
 
-          <div className="flex-1 flex flex-col items-center justify-between text-center">
+          <div className="flex-1 flex flex-col items-center justify-between text-center text-[14px]">
             <Image
               src="/animations/miku.gif"
               alt="dancing gif"
