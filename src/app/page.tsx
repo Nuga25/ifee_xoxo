@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Button from "@/components/Button";
 import FloatingRobot from "@/components/FloatingRobot";
 import aboutPage from "@/app/about/page";
 import Image from "next/image";
 import ProjectsPage from "./projects/page";
 import contactPage from "./contact/page";
+import experiencePage from "./experience/page";
 
 const titles = [
   "<Software Engineer/>",
@@ -70,14 +70,14 @@ export default function Home() {
       <Image
         src="/assets/pattern-small.svg"
         alt="Background pattern"
-        className="absolute top-64 right-0 w-10 sm:w-16 opacity-30"
+        className="absolute top-64 right-0 w-14 md:w-16 opacity-30"
         width={80}
         height={80}
       />
       <Image
         src="/assets/pattern-big.svg"
         alt="Background pattern"
-        className="absolute top-96 left-10 sm:left-1/4 w-20 sm:w-36 opacity-30"
+        className="absolute top-96 left-10 sm:left-1/4 w-28 md:w-36 opacity-30"
         width={140}
         height={140}
       />
@@ -105,7 +105,7 @@ export default function Home() {
 
       <section className="relative z-10">
         <header>
-          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 flex items-center justify-between w-[90%] sm:w-[70%] md:w-[55%] h-14 sm:h-16 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm font-semibold shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]">
+          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 flex items-center justify-between w-[90%] sm:w-[70%] md:w-[55%] h-14 sm:h-16 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm font-semibold shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]">
             {/* Logo */}
             <Image
               src="/assets/logo.svg"
@@ -178,7 +178,10 @@ export default function Home() {
         </header>
 
         <main className="text-white min-h-screen px-4 sm:px-8">
-          <section className="h-screen flex flex-col justify-between" id="home">
+          <section
+            className="relative h-screen flex flex-col justify-between"
+            id="home"
+          >
             <div className="flex flex-col justify-center">
               <div className="text-center mt-[40vh]">
                 <h3 className="font-bold text-[20px] sm:text-[28px] md:text-[30px]">
@@ -194,22 +197,29 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-between items-end gap-2 sm:gap-0 pb-4">
-              {/* Left: CV button */}
-              <Button>Download CV</Button>
+            {/* CV button */}
 
-              {/* Center: arrow */}
+            <div className="fixed bottom-6 left-6 z-40">
+              <button className="z-30 w-auto px-4 py-3 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm text-white font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_0_12px_#c779dd] hover:border-purple-400/50 active:shadow-[0_0_40px_#c779dd] active:scale-95 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.8)]">
+                CV
+              </button>
+            </div>
+
+            {/* Center: arrow */}
+            {/* <div>
               <a href="#about">
                 <Image
                   src="/assets/arrow.svg"
                   alt="arrow icon"
                   width={30}
                   height={30}
-                  className="sm:w-[60px] sm:block hidden animate-bounce cursor-pointer"
+                  className="sm:w-[60px] md:flex hidden animate-bounce cursor-pointer sticky left-1/2"
                 />
               </a>
+            </div> */}
 
-              {/* Right: robot + button */}
+            <div className="flex justify-end mb-4">
+              {/* robot + button */}
               <div className="sm:mr-6">
                 <FloatingRobot />
               </div>
@@ -221,6 +231,9 @@ export default function Home() {
 
           {/* PROJECTS SECTION */}
           <section>{ProjectsPage()}</section>
+
+          {/* EXPERIENCE SECTION */}
+          <section>{experiencePage()}</section>
 
           {/* CONTACT SECTION */}
           <section>{contactPage()}</section>

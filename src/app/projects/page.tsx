@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/Button";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -29,7 +28,7 @@ const ProjectsPage = () => {
         alt="Background pattern"
         width={80}
         height={80}
-        className="absolute top-56 -left-40 w-[250px] sm:w-[500px]"
+        className="absolute top-48 -left-40 w-[250px] sm:w-[500px] -z-10"
       />
 
       <div>
@@ -50,7 +49,7 @@ const ProjectsPage = () => {
         <div className="flex justify-between w-full lg:w-[70%] mx-auto my-10 text-[12px] lg:text-[18px] gap-3">
           <button
             onClick={() => setActiveTab("projects")}
-            className={`px-6 py-2 rounded-full transition-all border
+            className={`px-6 py-2 rounded-full transition-all border backdrop-blur-sm
             ${
               activeTab === "projects"
                 ? "bg-[#2b2035] border-[#C778DD] shadow-[0_0_20px_#C778DD33]"
@@ -62,7 +61,7 @@ const ProjectsPage = () => {
 
           <button
             onClick={() => setActiveTab("achievements")}
-            className={`px-6 py-2 rounded-full transition-all border
+            className={`px-6 py-2 rounded-full transition-all border backdrop-blur-sm
             ${
               activeTab === "achievements"
                 ? "bg-[#2b2035] border-[#C778DD] shadow-[0_0_20px_#C778DD33]"
@@ -111,7 +110,7 @@ const ProjectsPage = () => {
                   />
                 </div>
 
-                <p className="flex justify-end my-10 mr-10">
+                <p className="flex justify-end my-10 lg:mr-10">
                   <Link
                     href="/projects/all"
                     className="flex items-center text-sm"

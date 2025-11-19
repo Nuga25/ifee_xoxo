@@ -23,11 +23,11 @@ export default function FloatingRobot() {
               />
             </div>
             <button
-              className="px-6 py-2 text-sm font-bold text-black
+              className="md:px-6 md:py-2 px-2 py-1 text-[12px] md:text-sm font-bold text-black
               bg-white border border-white/20
               rounded-full shadow-md transition-all
               hover:shadow-[0_0_10px_#C778DD,0_0_30px_#C778DD]
-              focus:outline-none focus:ring-2 focus:ring-[#C778DD]/50 md:block hidden"
+              focus:outline-none focus:ring-2 focus:ring-[#C778DD]/50 "
             >
               Ask AI about me!
             </button>
@@ -36,8 +36,8 @@ export default function FloatingRobot() {
 
         {/* Chatbox Dialog */}
         <DialogContent
-          className="bg-[#0A0A0F]/90 border border-white/10
-          text-white max-w-md w-full rounded-2xl shadow-2xl p-6"
+          className="w-[95%] bg-[#0A0A0F]/90 border border-white/10
+          text-white max-w-md md:w-full rounded-2xl shadow-2xl p-6"
         >
           <DialogTitle>AI chatbox</DialogTitle>
           <h2 className="text-xl font-semibold mb-2">Chat with my AI 🤖</h2>

@@ -112,7 +112,7 @@ const contactPage = () => {
               alt="dancing gif"
               width={200}
               height={200}
-              className="w-[240px] h-[350px]"
+              className="w-[240px] h-[250px] md:h-[350px]"
             />
             <p>Thank you for visiting my website!!!</p>
           </div>
