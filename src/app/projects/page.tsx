@@ -94,9 +94,9 @@ const ProjectsPage = () => {
                   />
                   <ProjectCard
                     title="Interneefy"
-                    subtitle="An internship management system designed to streamline the internship process for organizations."
+                    subtitle="An internship management system I built for my SIWES project-- designed to streamline the internship process for organizations."
                     thumbnail="/images/interneefy.png"
-                    stack="Next.js · Tailwind · PostgreSQL"
+                    stack="Next.js · React.js · TypeScript · Tailwind CSS · Node.js · PostgreSQL · Prisma "
                     liveUrl="https://interneefy-frontend.vercel.app/"
                     githubUrl="https://github.com/Nuga25/interneefy-frontend"
                   />
@@ -113,9 +113,9 @@ const ProjectsPage = () => {
                 <p className="flex justify-end my-10 lg:mr-10">
                   <Link
                     href="/projects/all"
-                    className="flex items-center text-sm"
+                    className="flex items-center text-sm hover:text-my-primary"
                   >
-                    view all
+                    view more
                     <Image
                       src="/assets/view-all-arrow.svg"
                       alt="arrow icon"

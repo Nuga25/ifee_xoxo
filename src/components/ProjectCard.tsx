@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/Button";
 import Image from "next/image";
 
 type Props = {
@@ -21,9 +20,9 @@ export default function ProjectCard({
   githubUrl,
 }: Props) {
   return (
-    <div className="bg-[#0f0f12] border border-white/6 w-full h-[365px] overflow-hidden shadow-lg">
+    <div className="bg-[#0f0f12] border border-white/6 w-full h-[450px] overflow-hidden shadow-lg">
       {/* Thumbnail */}
-      <div className="h-[45%] w-full bg-gradient-to-br from-[#1f1b22] to-[#2b232f] relative">
+      <div className="h-[42%] w-full bg-gradient-to-br from-[#1f1b22] to-[#2b232f] relative">
         <Image
           src={thumbnail}
           alt={`${title} thumbnail`}

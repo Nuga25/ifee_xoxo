@@ -19,6 +19,7 @@ const navLinks = [
   { href: "#home", label: "home" },
   { href: "#about", label: "about" },
   { href: "#projects", label: "projects" },
+  { href: "#experience", label: "experience" },
   { href: "#contact", label: "contact" },
 ];
 
@@ -112,18 +113,18 @@ export default function Home() {
               alt="Logo"
               width={35}
               height={35}
-              className="sm:w-[50px]"
+              className="sm:w-[45px]"
             />
 
             {/* Desktop Links */}
-            <ul className="hidden md:flex gap-3 lg:gap-6 text-white font-semibold text-[14px] lg:text-[18px]">
+            <ul className="hidden md:flex gap-3 lg:gap-4 text-white font-semibold text-[14px]">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     className="flex items-center hover:underline hover:text-my-primary"
                   >
-                    <span className="text-my-primary text-[18px] lg:text-[22px] mr-1">
+                    <span className="text-my-primary text-[16px] lg:text-[18px] mr-1">
                       #
                     </span>
                     {link.label}
