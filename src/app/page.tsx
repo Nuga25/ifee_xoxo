@@ -189,7 +189,7 @@ export default function Home() {
         <main className="text-white min-h-screen px-4 sm:px-8">
           {/* !!! set gap to like 64 */}
           <section
-            className="relative max-h-[100vh] flex flex-col justify-between gap-40"
+            className="relative max-h-[100vh] flex flex-col justify-between gap-[10.5rem]"
             id="home"
           >
             <div className="flex flex-col justify-center">
