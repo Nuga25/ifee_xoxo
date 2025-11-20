@@ -75,7 +75,7 @@ const ContactPage = () => {
           alt="Background pattern"
           width={80}
           height={80}
-          className="absolute -bottom-16 left-10 md:left-0 w-36 sm:w-60"
+          className="absolute bottom-60 sm:-bottom-16 -left-12 w-36 sm:w-60"
         />
         <Image
           src="/assets/pattern-big.svg"
