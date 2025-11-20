@@ -188,11 +188,11 @@ export default function Home() {
 
         <main className="text-white min-h-screen px-4 sm:px-8">
           <section
-            className="relative min-h-screen flex flex-col justify-between"
+            className="relative max-h-[100vh] flex flex-col justify-between gap-72"
             id="home"
           >
             <div className="flex flex-col justify-center">
-              <div className="text-center mt-[38vh] sm:mt-[42vh]">
+              <div className="text-center mt-[39vh] sm:mt-[42vh]">
                 <h3 className="font-bold text-[20px] sm:text-[28px] md:text-[30px]">
                   Hi, I&apos;m{" "}
                   <span className="text-my-primary">Ifeoluwa Osinuga</span>
@@ -238,7 +238,7 @@ export default function Home() {
               </a>
             </div> */}
 
-            <div className="flex justify-end mb-16">
+            <div className="flex justify-end h-auto">
               {/* robot + button */}
               <div className="sm:mr-6">
                 <FloatingRobot />
