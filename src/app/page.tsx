@@ -192,7 +192,7 @@ export default function Home() {
             id="home"
           >
             <div className="flex flex-col justify-center">
-              <div className="text-center mt-[42vh]">
+              <div className="text-center mt-[38vh] sm:mt-[42vh]">
                 <h3 className="font-bold text-[20px] sm:text-[28px] md:text-[30px]">
                   Hi, I&apos;m{" "}
                   <span className="text-my-primary">Ifeoluwa Osinuga</span>
