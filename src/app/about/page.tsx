@@ -62,7 +62,7 @@ const aboutPage = () => {
               />
             </span>
           </h2>
-          <p>
+          <p className="text-center sm:text-left text-[1rem] pt-5">
             Hi! I&apos;m Ifeoluwa Osinuga, a final-year Computer Science student
             passionate about building responsive, user-friendly applications. My
             core stack includes Next.js, React, TypeScript, and Tailwind CSS.{" "}
