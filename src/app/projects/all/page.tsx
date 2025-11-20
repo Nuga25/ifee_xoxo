@@ -25,15 +25,6 @@ const allProjects = [
     githubUrl: "https://github.com/Nuga25/interneefy-frontend",
   },
   {
-    title: "Todo List",
-    subtitle:
-      "A simple and intuitive todo list application to help users manage their tasks effectively.",
-    thumbnail: "/images/todo-list.png",
-    stack: "HTML · CSS · JavaScript · localStorage",
-    liveUrl: "https://nuga25.github.io/Todo-List/",
-    githubUrl: "https://github.com/Nuga25/Todo-List",
-  },
-  {
     title: "Tic Tac Toe",
     subtitle:
       "This is a simple implementation of the classic Tic-Tac-Toe game. A project from TOP(The Odin Project).",
@@ -41,6 +32,15 @@ const allProjects = [
     stack: "HTML · CSS · JavaScript ",
     liveUrl: "https://nuga25.github.io/Tic-Tac-Toe/",
     githubUrl: "https://github.com/Nuga25/Tic-Tac-Toe",
+  },
+  {
+    title: "Todo List",
+    subtitle:
+      "A simple and intuitive todo list application to help users manage their tasks effectively.",
+    thumbnail: "/images/todo-list.png",
+    stack: "HTML · CSS · JavaScript · localStorage",
+    liveUrl: "https://nuga25.github.io/Todo-List/",
+    githubUrl: "https://github.com/Nuga25/Todo-List",
   },
   {
     title: "Etch A Sketch",
