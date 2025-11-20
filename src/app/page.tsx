@@ -238,7 +238,7 @@ export default function Home() {
               </a>
             </div> */}
 
-            <div className="flex justify-end mb-6">
+            <div className="flex justify-end mb-8">
               {/* robot + button */}
               <div className="sm:mr-6">
                 <FloatingRobot />
