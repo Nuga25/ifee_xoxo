@@ -289,7 +289,7 @@ export default function Home() {
               target="_blank"
             >
               <Image
-                src="/assets/linkedin-icon.svg"
+                src="/assets/linkedIn-icon.svg"
                 alt="LinkedIn"
                 width={35}
                 height={35}
