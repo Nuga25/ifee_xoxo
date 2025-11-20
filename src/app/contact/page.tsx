@@ -67,29 +67,31 @@ const ContactPage = () => {
   return (
     <section
       id="contact"
-      className="space-y-16 mt-40 mb-20 px-5 sm:px-32 relative"
+      className="space-y-16 my-40 mb-20 px-5 sm:px-32 relative scroll-mt-10 md:scroll-mt-32"
     >
-      <Image
-        src="/assets/dots-large.svg"
-        alt="Background pattern"
-        width={80}
-        height={80}
-        className="absolute top-[460px] md:top-96 -left-10 md:left-0 w-36 sm:w-60"
-      />
-      <Image
-        src="/assets/pattern-big.svg"
-        alt="Background pattern"
-        width={80}
-        height={80}
-        className="absolute -top-14 -right-10 w-20 sm:w-32 opacity-40"
-      />
-      <Image
-        src="/assets/ellipse-large.png"
-        alt="Background pattern"
-        width={80}
-        height={80}
-        className="absolute -bottom-96 -right-52 w-[250px] sm:w-[640px]"
-      />
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/assets/dots-large.svg"
+          alt="Background pattern"
+          width={80}
+          height={80}
+          className="absolute -bottom-16 left-10 md:left-0 w-36 sm:w-60"
+        />
+        <Image
+          src="/assets/pattern-big.svg"
+          alt="Background pattern"
+          width={80}
+          height={80}
+          className="absolute -top-14 -right-10 w-20 sm:w-32 opacity-40"
+        />
+        <Image
+          src="/assets/ellipse-large.png"
+          alt="Background pattern"
+          width={80}
+          height={80}
+          className="-z-10 absolute -bottom-32 -right-20 w-[270px]"
+        />
+      </div>
 
       <div>
         <h2 className="font-semibold text-[24px] lg:text-[32px] flex items-center mb-6">

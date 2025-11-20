@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 import FloatingRobot from "@/components/FloatingRobot";
-import aboutPage from "@/app/about/page";
+import AboutPage from "@/app/about/page";
 import Image from "next/image";
 import ProjectsPage from "./projects/page";
 import ContactPage from "./contact/page";
-import experiencePage from "./experience/page";
+import ExperiencePage from "./experience/page";
 
 const titles = [
   "<Software Engineer/>",
@@ -188,11 +188,11 @@ export default function Home() {
 
         <main className="text-white min-h-screen px-4 sm:px-8">
           <section
-            className="relative h-screen flex flex-col justify-between"
+            className="relative min-h-screen flex flex-col justify-between"
             id="home"
           >
             <div className="flex flex-col justify-center">
-              <div className="text-center mt-[40vh]">
+              <div className="text-center mt-[42vh]">
                 <h3 className="font-bold text-[20px] sm:text-[28px] md:text-[30px]">
                   Hi, I&apos;m{" "}
                   <span className="text-my-primary">Ifeoluwa Osinuga</span>
@@ -238,7 +238,7 @@ export default function Home() {
               </a>
             </div> */}
 
-            <div className="flex justify-end mb-4">
+            <div className="flex justify-end mb-6">
               {/* robot + button */}
               <div className="sm:mr-6">
                 <FloatingRobot />
@@ -247,19 +247,19 @@ export default function Home() {
           </section>
 
           {/* ABOUT ME SECTION */}
-          <section>{aboutPage()}</section>
+          <AboutPage />
 
           {/* PROJECTS SECTION */}
-          <section>{ProjectsPage()}</section>
+          <ProjectsPage />
 
           {/* EXPERIENCE SECTION */}
-          <section>{experiencePage()}</section>
+          <ExperiencePage />
 
           {/* CONTACT SECTION */}
-          <section>{ContactPage()}</section>
+          <ContactPage />
         </main>
 
-        <footer className="text-center py-3">
+        <footer className="text-center py-3 mb-0">
           <small className="text-white text-[10px]">
             Designed and Coded by{" "}
             <a

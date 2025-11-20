@@ -12,10 +12,22 @@ const ProjectsPage = () => {
     "projects"
   );
 
-  const achievements = ["/images/upskill.jpg", "/images/idk.jpg"];
+  const achievements = [
+    {
+      src: "/images/upskill.jpg",
+      caption: "One of the winners of Upskill with Cardtonic 3.0",
+    },
+    {
+      src: "/images/idk.jpg",
+      caption: "Frontend Engineering Certification from Altschool Africa",
+    },
+  ];
 
   return (
-    <section id="projects" className="space-y-16 my-40 px-5 sm:px-32 relative">
+    <section
+      id="projects"
+      className="space-y-16 my-40 px-5 sm:px-32 relative scroll-mt-10 md:scroll-mt-32"
+    >
       <Image
         src="/assets/dots-small.svg"
         alt="Background pattern"
@@ -23,6 +35,7 @@ const ProjectsPage = () => {
         height={80}
         className="absolute top-16 md:right-60 right-10 w-10 sm:w-16"
       />
+
       <Image
         src="/assets/ellipse-large.png"
         alt="Background pattern"
@@ -137,7 +150,7 @@ const ProjectsPage = () => {
               >
                 <div className="w-full max-w-4xl">
                   <Carousel
-                    images={achievements}
+                    slides={achievements}
                     autoPlay
                     autoPlayInterval={6000}
                     showIndicators

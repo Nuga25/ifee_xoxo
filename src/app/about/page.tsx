@@ -11,19 +11,14 @@ const skills = [
   "CSS",
   "Git & GitHub",
   "Figma",
-  "Firebase",
 ];
 
 const aboutPage = () => {
   return (
-    <section id="about" className="relative my-20 space-y-16">
-      <Image
-        src="/assets/line-horizontal.png"
-        alt="line"
-        width={0}
-        height={0}
-        className="w-96 h-[0.5px] sm:w-96 mx-auto mt-32 mb-36"
-      />
+    <section
+      id="about"
+      className="relative mt-32 mb-20 space-y-16 scroll-mt-10"
+    >
       <Image
         src="/assets/ellipse-large.png"
         alt="bg"
@@ -46,6 +41,13 @@ const aboutPage = () => {
         className="absolute -bottom-40 -left-10 w-[50px] sm:w-[110px] opacity-30"
       />
 
+      <Image
+        src="/assets/line-horizontal.png"
+        alt="line"
+        width={0}
+        height={0}
+        className="w-96 h-[0.5px] sm:w-96 mx-auto"
+      />
       <div className="flex lg:flex-row flex-col gap-20 justify-between items-center px-5 sm:px-32 w-full">
         <div className="flex-[1.2]">
           <h2 className="font-semibold text-[24px] lg:text-[32px] flex items-center mb-6">
@@ -61,18 +63,15 @@ const aboutPage = () => {
             </span>
           </h2>
           <p>
-            I&apos;m a final year Computer Science student at Lagos State
-            University, a creative technologist and front-end developer who
-            loves transforming ideas into interactive digital experiences. My
-            work blends art and logic — crafting clean code wrapped in
-            thoughtful design.
-            <br /> <br /> I&apos;m passionate about building interfaces that not
-            only look beautiful but feel alive, combining sleek aesthetics with
-            smooth user interactions. <br /> <br />
-            Whether it&apos;s experimenting with motion, optimizing for
-            accessibility, or designing for the future web, I approach every
-            project with curiosity, precision, and a deep love for technology as
-            an art form.
+            Hi! I&apos;m Ifeoluwa Osinuga, a final-year Computer Science student
+            passionate about building responsive, user-friendly applications. My
+            core stack includes Next.js, React, TypeScript, and Tailwind CSS.{" "}
+            <br />I am driven by curiosity and a commitment to continuous
+            learning, exploring new technologies and best practices to optimize
+            performance and user experience. I am eager to learn, work with
+            others, and create meaningful technology while staying curious and
+            having fun. <br /> Outside of coding, you would probably find me
+            scrolling through social media or watching K-dramas.
           </p>
         </div>
         <div className="flex-1 flex justify-center">

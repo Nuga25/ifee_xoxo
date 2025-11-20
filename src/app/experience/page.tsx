@@ -4,7 +4,7 @@ const experiencePage = () => {
   return (
     <section
       id="experience"
-      className="relative my-32 px-6 lg:px-28 min-h-screen"
+      className="relative space-y-16 my-40 px-6 lg:px-28 scroll-mt-10 md:scroll-mt-32"
     >
       <h2 className="font-semibold text-[24px] lg:text-[32px] flex items-center mb-20">
         <span className="text-my-primary">#</span>experience{" "}
@@ -19,7 +19,7 @@ const experiencePage = () => {
         </span>
       </h2>
 
-      <div className="relative md:px-[73px]">
+      <div className="relative md:px-[73px] overflow-hidden">
         {/* Vertical line */}
         <div className="absolute left-4 sm:left-24 top-0 bottom-0 w-[2px] bg-white/10 rounded-full"></div>
 
