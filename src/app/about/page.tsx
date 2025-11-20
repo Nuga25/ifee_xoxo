@@ -74,13 +74,36 @@ const aboutPage = () => {
             scrolling through social media or watching K-dramas.
           </p>
         </div>
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center sm:mt-6 mt-32 relative">
+          {/* bg patterns */}
           <Image
-            src="/images/my-picture-.png"
+            src="/assets/star.svg"
+            alt="star"
+            width={0}
+            height={0}
+            className="-z-10 w-28 h-28 absolute -top-9 left-5"
+          />
+          <Image
+            src="/assets/smiley.svg"
+            alt="smiley"
+            width={0}
+            height={0}
+            className="w-20 h-20 absolute top-16 right-10 sm:right-2"
+          />
+          <Image
+            src="/assets/heart.svg"
+            alt="heart"
+            width={0}
+            height={0}
+            className="-z-10 w-36 h-36 absolute -bottom-5 -left-3"
+          />
+
+          {/* portfolio picture */}
+          <Image
+            src="/images/my-picture-1.png"
             alt="my portrait"
             width={300}
-            height={270}
-            className=" sm:mt-6 mt-14"
+            height={280}
           />
         </div>
       </div>
