@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const experiencePage = () => {
   return (
-    <section id="experience" className="relative my-32 px-6 sm:px-28 h-screen">
+    <section
+      id="experience"
+      className="relative my-32 px-6 lg:px-28 min-h-screen"
+    >
       <h2 className="font-semibold text-[24px] lg:text-[32px] flex items-center mb-20">
         <span className="text-my-primary">#</span>experience{" "}
         <span className="ml-6">

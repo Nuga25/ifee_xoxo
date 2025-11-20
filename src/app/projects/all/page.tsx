@@ -93,7 +93,7 @@ const AllProjectsPage = () => {
   return (
     <section className="px-10 sm:px-32 py-20 bg-bg-dark">
       <div className="mb-8">
-        <Link href="/" className="text-sm text-my-primary underline">
+        <Link href="/#projects" className="text-sm text-my-primary underline">
           &larr; Back
         </Link>
       </div>

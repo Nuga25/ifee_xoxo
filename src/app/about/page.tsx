@@ -61,10 +61,11 @@ const aboutPage = () => {
             </span>
           </h2>
           <p>
-            I&apos;m a creative technologist and front-end developer who loves
-            transforming ideas into interactive digital experiences. My work
-            blends art and logic — crafting clean code wrapped in thoughtful
-            design.
+            I&apos;m a final year Computer Science student at Lagos State
+            University, a creative technologist and front-end developer who
+            loves transforming ideas into interactive digital experiences. My
+            work blends art and logic — crafting clean code wrapped in
+            thoughtful design.
             <br /> <br /> I&apos;m passionate about building interfaces that not
             only look beautiful but feel alive, combining sleek aesthetics with
             smooth user interactions. <br /> <br />

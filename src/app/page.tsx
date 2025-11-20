@@ -5,7 +5,7 @@ import FloatingRobot from "@/components/FloatingRobot";
 import aboutPage from "@/app/about/page";
 import Image from "next/image";
 import ProjectsPage from "./projects/page";
-import contactPage from "./contact/page";
+import ContactPage from "./contact/page";
 import experiencePage from "./experience/page";
 
 const titles = [
@@ -106,7 +106,7 @@ export default function Home() {
 
       <section className="relative z-10">
         <header>
-          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 flex items-center justify-between w-[90%] sm:w-[70%] md:w-[55%] h-14 sm:h-16 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm font-semibold shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]">
+          <nav className="z-20 fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-8 py-3 flex items-center justify-between w-[90%] sm:w-[70%] lg:w-[55%] h-14 sm:h-16 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm font-semibold shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]">
             {/* Logo */}
             <Image
               src="/assets/logo.svg"
@@ -201,8 +201,16 @@ export default function Home() {
             {/* CV button */}
 
             <div className="fixed bottom-6 left-6 z-40">
-              <button className="z-30 w-auto px-4 py-3 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm text-white font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_0_12px_#c779dd] hover:border-purple-400/50 active:shadow-[0_0_40px_#c779dd] active:scale-95 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.8)]">
-                CV
+              <button className="z-30 flex w-auto px-3 py-2 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm text-white font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_0_12px_#c779dd] hover:border-purple-400/50 active:shadow-[0_0_40px_#c779dd] active:scale-95 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.8)]">
+                <span className="text-my-primary mr-1">{"{"}</span>
+                CV{" "}
+                <Image
+                  src="/assets/download-icon.svg"
+                  alt="download icon"
+                  width={25}
+                  height={25}
+                />
+                <span className="text-my-primary ml-1">{"}"}</span>
               </button>
             </div>
 
@@ -237,7 +245,7 @@ export default function Home() {
           <section>{experiencePage()}</section>
 
           {/* CONTACT SECTION */}
-          <section>{contactPage()}</section>
+          <section>{ContactPage()}</section>
         </main>
 
         <footer className="text-center py-3">

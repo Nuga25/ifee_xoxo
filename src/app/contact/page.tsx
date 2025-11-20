@@ -1,6 +1,69 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
-const contactPage = () => {
+const ContactPage = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<null | string>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+
+    try {
+      // Validation
+      if (!fullName || !email || !message) {
+        setStatus("Please fill in all fields.");
+        setTimeout(() => setStatus(null), 5000);
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        setStatus("Please enter a valid email address.");
+        setTimeout(() => setStatus(null), 5000);
+        return;
+      }
+
+      // send data to backend API route
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ fullName, email, message }),
+      });
+
+      if (res.ok) {
+        setStatus(
+          "Your message has been sent successfully! Expect feedback soon."
+        );
+        setFullName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setStatus(
+          "Something went wrong. Please try again or contact me through my socials."
+        );
+      }
+
+      setTimeout(() => setStatus(null), 5000);
+    } catch (error) {
+      console.error(error);
+      setStatus(
+        "Something went wrong. Please try again or contact me through my socials."
+      );
+      setTimeout(() => setStatus(null), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -44,7 +107,7 @@ const contactPage = () => {
 
         <div className="flex flex-col lg:flex-row justify-between gap-20 mt-20">
           <form
-            action="#"
+            onSubmit={handleSubmit}
             className="flex flex-col flex-1 gap-4 px-4 sm:px-8 py-8 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm shadow-[inset_1px_0.5px_2px_rgba(255,255,255,0.9)]"
           >
             <div className="flex flex-col w-[100%]">
@@ -58,7 +121,8 @@ const contactPage = () => {
               <input
                 type="text"
                 id="fullName"
-                name="fullName"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
                 className="border border-my-primary/50 rounded-md focus:outline-1 focus:outline-my-primary/70 px-3 py-2 w-[100%] text-bg-dark font-normal h-8"
               />
             </div>
@@ -74,7 +138,8 @@ const contactPage = () => {
               <input
                 type="text"
                 id="email"
-                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="border border-my-primary/50 rounded-md focus:outline-1 focus:outline-my-primary/70 px-3 py-2 w-[100%] text-bg-dark font-normal h-8"
               />
             </div>
@@ -89,21 +154,27 @@ const contactPage = () => {
               </label>
               <textarea
                 id="message"
-                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="border border-my-primary/50 rounded-md focus:outline-1 focus:outline-my-primary/70 px-3 py-2 w-[100%] text-bg-dark font-normal h-24 resize-none"
               />
             </div>
 
             <button
               type="submit"
-              className="self-start mt-7 px-6 py-2 text-sm font-bold text-white
-              bg-my-primary border border-white/20
-              rounded-lg shadow-md transition-all
-              hover:shadow-[0_0_10px_#C778DD,0_0_30px_#C778DD]
-              focus:outline-none focus:ring-2 focus:ring-[#C778DD]/50 w-[100%]"
+              disabled={isSubmitting}
+              className={`self-start mt-7 px-6 py-2 text-sm font-bold text-white bg-my-primary border border-white/20 rounded-lg shadow-md transition-all hover:shadow-[0_0_10px_#C778DD,0_0_30px_#C778DD] focus:outline-none focus:ring-2 focus:ring-[#C778DD]/50 w-[100%] ${
+                isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
+
+            {status && (
+              <p className="text-sm mt-3 text-my-primary/80 mx-auto text-center w-full">
+                {status}
+              </p>
+            )}
           </form>
 
           <div className="flex-1 flex flex-col items-center justify-between text-center text-[14px]">
@@ -122,4 +193,4 @@ const contactPage = () => {
   );
 };
 
-export default contactPage;
+export default ContactPage;
