@@ -83,7 +83,7 @@ export default function Carousel({
   return (
     <div className="relative w-full select-none">
       <div
-        className="relative w-full h-[450px] overflow-hidden rounded-md"
+        className="relative w-full h-[180px] sm:h-[450px] overflow-hidden rounded-md"
         onMouseEnter={() => {
           isPaused.current = true;
           stopAutoPlay();
@@ -124,7 +124,7 @@ export default function Carousel({
 
             {/* Caption */}
             {slides[imageIndex].caption && (
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-md text-sm text-center">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 backdrop-blur-sm text-white w-[90%] px-2 py-1 md:px-4 md:py-2 rounded-md text-[7px] md:text-sm text-center">
                 {slides[imageIndex].caption}
               </div>
             )}

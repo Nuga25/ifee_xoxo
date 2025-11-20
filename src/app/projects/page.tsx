@@ -158,7 +158,7 @@ const ProjectsPage = () => {
                   />
                 </div>
 
-                <p className="mt-6 text-sm text-gray-300">
+                <p className="mt-6 text-[10px] text-center sm:text-sm text-gray-300">
                   Swipe to explore — or use the arrows / dots.
                 </p>
               </motion.div>
