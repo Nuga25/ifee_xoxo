@@ -10,8 +10,8 @@ const allProjects = [
     subtitle:
       "A personal portfolio website to showcase my projects and skills.",
     thumbnail: "/images/portfolio.png",
-    stack: "Next.js · Tailwind · PostgreSQL",
-    liveUrl: "https://interneefy-frontend.vercel.app/",
+    stack: "Next.js · TypeScript · Tailwind ",
+    liveUrl: "https://ifee-xoxo.vercel.app/",
     githubUrl: "https://github.com/Nuga25/ifee_xoxo",
   },
   {

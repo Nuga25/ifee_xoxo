@@ -16,7 +16,7 @@ const titles = [
 ];
 
 const navLinks = [
-  { href: "#home", label: "home" },
+  { href: "/", label: "home" },
   { href: "#about", label: "about" },
   { href: "#projects", label: "projects" },
   { href: "#experience", label: "experience" },
@@ -57,6 +57,14 @@ export default function Home() {
     const blinkInterval = setInterval(() => setBlink((prev) => !prev), 500);
     return () => clearInterval(blinkInterval);
   }, []);
+
+  // function to download CV
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/files/ifeoluwa-osinuga-CV.pdf";
+    link.download = "Ifeoluwa-Osinuga-CV.pdf";
+    link.click();
+  };
 
   return (
     <div className="relative min-h-screen bg-[#0A0A0F] overflow-hidden">
@@ -201,7 +209,10 @@ export default function Home() {
             {/* CV button */}
 
             <div className="fixed bottom-6 left-6 z-40">
-              <button className="z-30 flex w-auto px-3 py-2 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm text-white font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_0_12px_#c779dd] hover:border-purple-400/50 active:shadow-[0_0_40px_#c779dd] active:scale-95 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.8)]">
+              <button
+                onClick={handleDownload}
+                className="z-30 flex w-auto px-3 py-2 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm text-white font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_0_12px_#c779dd] hover:border-purple-400/50 active:shadow-[0_0_40px_#c779dd] active:scale-95 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.8)]"
+              >
                 <span className="text-my-primary mr-1">{"{"}</span>
                 CV{" "}
                 <Image
