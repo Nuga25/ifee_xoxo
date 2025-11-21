@@ -7,6 +7,8 @@ import Image from "next/image";
 import ProjectsPage from "./projects/page";
 import ContactPage from "./contact/page";
 import ExperiencePage from "./experience/page";
+import LoadingScreen from "@/components/LoadingScreen";
+import CustomCursor from "@/components/CustomCursor";
 
 const titles = [
   "<Software Engineer/>",
@@ -68,6 +70,14 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#0A0A0F] overflow-hidden">
+      {/* loading screen */}
+      <LoadingScreen />
+
+      {/* Custom Cursor */}
+      <div className="hidden lg:block">
+        <CustomCursor />
+      </div>
+
       {/* bg images */}
       <Image
         src="/assets/dots-small.svg"
@@ -166,7 +176,7 @@ export default function Home() {
 
             {/* Mobile dropdown */}
             <ul
-              className={`md:hidden fixed top-16 right-4 w-[92%] bg-bg-dark border border-my-primary/40 backdrop-blur-md rounded-xl p-4 flex flex-col gap-4 text-white font-semibold transition-all duration-300 overflow-hidden ${
+              className={`z-50 md:hidden fixed top-16 right-4 w-[92%] bg-bg-dark border border-my-primary/40 backdrop-blur-md rounded-xl p-4 flex flex-col gap-4 text-white font-semibold transition-all duration-300 overflow-hidden ${
                 isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
@@ -245,16 +255,12 @@ export default function Home() {
             </div>
           </section>
 
-          {/* ABOUT ME SECTION */}
           <AboutPage />
 
-          {/* PROJECTS SECTION */}
           <ProjectsPage />
 
-          {/* EXPERIENCE SECTION */}
           <ExperiencePage />
 
-          {/* CONTACT SECTION */}
           <ContactPage />
         </main>
 
