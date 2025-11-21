@@ -22,7 +22,7 @@ export default function ProjectCard({
   return (
     <div className="bg-[#0f0f12] border border-white/6 w-full h-[450px] overflow-hidden shadow-lg">
       {/* Thumbnail */}
-      <div className="h-[42%] w-full bg-gradient-to-br from-[#1f1b22] to-[#2b232f] relative">
+      <div className="h-[40%] w-full bg-gradient-to-br from-[#1f1b22] to-[#2b232f] relative">
         <Image
           src={thumbnail}
           alt={`${title} thumbnail`}

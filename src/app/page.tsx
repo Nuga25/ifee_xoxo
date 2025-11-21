@@ -7,7 +7,6 @@ import Image from "next/image";
 import ProjectsPage from "./projects/page";
 import ContactPage from "./contact/page";
 import ExperiencePage from "./experience/page";
-import LoadingScreen from "@/components/LoadingScreen";
 import CustomCursor from "@/components/CustomCursor";
 
 const titles = [
@@ -31,6 +30,21 @@ export default function Home() {
   const [blink, setBlink] = useState(true);
   const [reverse, setReverse] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // mobile nav state
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const sectionId = href.substring(1); // Remove the #
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+    setIsOpen(false); // Close mobile menu
+  };
 
   useEffect(() => {
     if (index === titles.length) return;
@@ -70,9 +84,6 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#0A0A0F] overflow-hidden">
-      {/* loading screen */}
-      <LoadingScreen />
-
       {/* Custom Cursor */}
       <div className="hidden lg:block">
         <CustomCursor />
@@ -140,6 +151,7 @@ export default function Home() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="flex items-center hover:underline hover:text-my-primary"
                   >
                     <span className="text-my-primary text-[16px] lg:text-[18px] mr-1">
@@ -185,7 +197,10 @@ export default function Home() {
                   <a
                     href={link.href}
                     className="flex items-center hover:underline hover:text-my-primary"
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => {
+                      handleNavClick(e, link.href);
+                      setIsOpen(false);
+                    }}
                   >
                     <span className="text-my-primary text-[18px] mr-1">#</span>
                     {link.label}
@@ -279,7 +294,7 @@ export default function Home() {
         </footer>
 
         {/* social links */}
-        <div className="fixed top-0 left-3 sm:left-6 z-20">
+        <div className="fixed top-0 left-3 sm:left-6 z-20 sm:block hidden">
           <div className="flex justify-center items-center">
             <Image
               src="/assets/line-vertical.png"

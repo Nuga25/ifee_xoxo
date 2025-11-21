@@ -34,13 +34,13 @@ const allProjects = [
     githubUrl: "https://github.com/Nuga25/Tic-Tac-Toe",
   },
   {
-    title: "Todo List",
+    title: "Space Tourism Website",
     subtitle:
-      "A simple and intuitive todo list application to help users manage their tasks effectively.",
-    thumbnail: "/images/todo-list.png",
-    stack: "HTML · CSS · JavaScript · localStorage",
-    liveUrl: "https://nuga25.github.io/Todo-List/",
-    githubUrl: "https://github.com/Nuga25/Todo-List",
+      "A frontend mentor challenge--responsive space tourism website that provides information about space travel and related services.",
+    thumbnail: "/images/space-tourism.png",
+    stack: "TypeScript · React.js · Next.js · Tailwind CSS ",
+    liveUrl: "https://space-tourism-website-henna.vercel.app/",
+    githubUrl: "https://github.com/Nuga25/space-tourism-website",
   },
   {
     title: "Etch A Sketch",
@@ -52,13 +52,13 @@ const allProjects = [
     githubUrl: "https://github.com/Nuga25/odin-etch-a-sketch-proj",
   },
   {
-    title: "Space Tourism Website",
+    title: "Positivus Landing page",
     subtitle:
-      "A frontend mentor challenge--responsive space tourism website that provides information about space travel and related services.",
-    thumbnail: "/images/space-tourism.png",
-    stack: "TypeScript · React.js · Next.js · Tailwind CSS ",
-    liveUrl: "https://space-tourism-website-henna.vercel.app/",
-    githubUrl: "https://github.com/Nuga25/space-tourism-website",
+      "A landing page for Positivus, showcasing their products and services.",
+    thumbnail: "/images/positivus.png",
+    stack: "HTML · CSS · JavaScript ",
+    liveUrl: "https://positivus-phi-dun.vercel.app/",
+    githubUrl: "https://github.com/Nuga25/Positivus",
   },
   {
     title: "Loan Dashboard",
@@ -70,13 +70,13 @@ const allProjects = [
     githubUrl: "https://github.com/Nuga25/loan-dashboard",
   },
   {
-    title: "Positivus Landing page",
+    title: "Todo List",
     subtitle:
-      "A landing page for Positivus, showcasing their products and services.",
-    thumbnail: "/images/positivus.png",
-    stack: "HTML · CSS · JavaScript ",
-    liveUrl: "https://positivus-phi-dun.vercel.app/",
-    githubUrl: "https://github.com/Nuga25/Positivus",
+      "A simple and intuitive todo list application to help users manage their tasks effectively.",
+    thumbnail: "/images/todo-list.png",
+    stack: "HTML · CSS · JavaScript · localStorage",
+    liveUrl: "https://nuga25.github.io/Todo-List/",
+    githubUrl: "https://github.com/Nuga25/Todo-List",
   },
   {
     title: "E-commerce Product Page",

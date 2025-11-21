@@ -4,32 +4,66 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function LoadingScreen() {
-  const [loading, setLoading] = useState(true);
+  const shouldShow =
+    typeof window !== "undefined"
+      ? !sessionStorage.getItem("hasLoadedBefore")
+      : true;
+
+  const [loading, setLoading] = useState(shouldShow);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate loading progress
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(() => setLoading(false), 500);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }, 150);
+    // Don't run if we shouldn't show the loading screen
+    if (!shouldShow) {
+      return;
+    }
 
-    return () => clearInterval(interval);
-  }, []);
+    // Mark that we've loaded (for future navigations)
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("hasLoadedBefore", "true");
+    }
+    // Simulate progress while page loads
+    const progressInterval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 90) {
+          clearInterval(progressInterval);
+          return 90; // Stop at 90% until page fully loads
+        }
+        return prev + Math.random() * 15; // Random increments for realistic feel
+      });
+    }, 200);
+
+    // Wait for page to fully load
+    const handleLoad = () => {
+      clearInterval(progressInterval);
+      setProgress(100);
+
+      // Small delay after 100% for smooth exit
+      setTimeout(() => {
+        setLoading(false);
+      }, 400);
+    };
+
+    // Check if page is already loaded
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => {
+      clearInterval(progressInterval);
+      window.removeEventListener("load", handleLoad);
+    };
+  }, [shouldShow]);
 
   return (
     <AnimatePresence>
-      {loading && (
+      {shouldShow && loading && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, scale: 1.1 }}
-          transition={{ duration: 0.1, ease: "easeInOut" }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-[100] bg-[#0A0A0F] flex flex-col items-center justify-center"
         >
           {/* Logo or Name */}
@@ -40,19 +74,18 @@ export default function LoadingScreen() {
             className="mb-8"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white">
-              <span className="text-my-primary">{"<"}</span>
-              ifee_xoxo
-              <span className="text-my-primary">{"/>"}</span>
+              <span className="text-purple-500">{"<"}</span>
+              ifee.xoxo
+              <span className="text-purple-500">{"/>"}</span>
             </h1>
           </motion.div>
 
           {/* Progress Bar */}
           <div className="w-64 md:w-96 h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.3 }}
-              className="h-full bg-gradient-to-r from-my-primary to-purple-400"
+              animate={{ width: `${Math.min(progress, 100)}%` }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="h-full bg-gradient-to-r from-purple-500 to-purple-400"
             />
           </div>
 
@@ -60,9 +93,9 @@ export default function LoadingScreen() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-white/60 mt-4 text-sm"
+            className="text-white/60 mt-4 text-sm font-mono"
           >
-            {progress}%
+            {Math.floor(Math.min(progress, 100))}%
           </motion.p>
 
           {/* Animated dots */}
@@ -71,10 +104,20 @@ export default function LoadingScreen() {
             transition={{ duration: 1.5, repeat: Infinity }}
             className="flex gap-2 mt-6"
           >
-            <div className="w-2 h-2 bg-my-primary rounded-full" />
-            <div className="w-2 h-2 bg-my-primary rounded-full" />
-            <div className="w-2 h-2 bg-my-primary rounded-full" />
+            <div className="w-2 h-2 bg-purple-500 rounded-full" />
+            <div className="w-2 h-2 bg-purple-500 rounded-full" />
+            <div className="w-2 h-2 bg-purple-500 rounded-full" />
           </motion.div>
+
+          {/* Loading text */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-white/40 mt-4 text-xs"
+          >
+            Loading portfolio...
+          </motion.p>
         </motion.div>
       )}
     </AnimatePresence>

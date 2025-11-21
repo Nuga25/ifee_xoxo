@@ -190,6 +190,51 @@ const ContactPage = () => {
             <p>Thank you for visiting my website!!!</p>
           </div>
         </div>
+
+        {/* socials */}
+        <div className="flex justify-center sm:hidden w-full">
+          <div className="flex gap-2 justify-between sm:gap-3 mt-10 w-[70%]">
+            <a href="https://github.com/Nuga25" target="_blank">
+              <Image
+                src="/assets/github-icon.svg"
+                alt="GitHub"
+                width={35}
+                height={35}
+                className="sm:w-[45px] hover:scale-110 transition-all"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/osinugaifeoluwa/"
+              target="_blank"
+            >
+              <Image
+                src="/assets/linkedIn-icon.svg"
+                alt="LinkedIn"
+                width={35}
+                height={35}
+                className="sm:w-[45px] hover:scale-110 transition-all"
+              />
+            </a>
+            <a href="mailto:osinugaifeoluwa1@gmail.com" target="_blank">
+              <Image
+                src="/assets/gmail-icon.svg"
+                alt="Gmail"
+                width={35}
+                height={35}
+                className="sm:w-[45px] hover:scale-110 transition-all"
+              />
+            </a>
+            <a href="https://wa.me/+2349160591907" target="_blank">
+              <Image
+                src="/assets/whatsapp-icon.svg"
+                alt="WhatsApp"
+                width={35}
+                height={35}
+                className="sm:w-[45px] hover:scale-110 transition-all"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
