@@ -12,7 +12,7 @@
   {
     "id": "education",
     "title": "Education",
-    "content": "Studying BSc Computer Science at Lagos State University. Expected graduation September 2026. Completed Frontend Engineering program at AltSchool Africa with modules including HTML, CSS, JavaScript, TypeScript, React, Next.js, and accessibility."
+    "content": "Studying BSc Computer Science at Lagos State University with modules Software Engineering, Web and Internet Technology, Basic Java, basic C++, Algorithms and Data Structures, Systems Design and Security, Data Driven Computing, Databases, Computer Architecture and Networking. Expected graduation September 2026. Completed Frontend Engineering program at AltSchool Africa with modules including HTML, CSS, JavaScript, TypeScript, React, Next.js, and accessibility."
   },
   {
     "id": "project_interneefy",
@@ -28,5 +28,16 @@
     "id": "career",
     "title": "Career Goals",
     "content": "Aiming to become a strong frontend engineer with fullstack capabilities, with interests in cloud engineering, accessible user interfaces, and building scalable applications."
+  },
+  {
+    "id": "values",
+    "title": "Personality & Work Values",
+    "content": "Ifeoluwa values clean design, reliability, attention to detail, and consistent improvement. She enjoys taking feedback, learning quickly, and asking the right questions. Her work style is organized, curious, and focused—she prefers understanding concepts deeply rather than rushing. She loves building things that are both aesthetically pleasing and technically sound."
+  },
+
+  {
+    "id": "fun_facts",
+    "title": "Fun Facts",
+    "content": "She loves Kdramas, enjoys scrolling through social media in her free time, and likes exploring new tech tools just for fun. She also enjoys designing UI layouts, tweaking animations, and trying out new frameworks."
   }
 ]
