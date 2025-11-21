@@ -40,7 +40,7 @@ export default function LoadingScreen() {
     const onLoad = () => finishLoading();
 
     if (document.readyState === "complete") {
-      // tiny minimum delay time so animation isn't skipped entirely
+      setTimeout(finishLoading, 800);
     } else {
       window.addEventListener("load", onLoad);
     }
@@ -66,7 +66,6 @@ export default function LoadingScreen() {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-[100] bg-[#0A0A0F] flex flex-col items-center justify-center"
         >
-          {/* Logo */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
