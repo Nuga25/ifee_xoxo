@@ -10,8 +10,8 @@ import ExperiencePage from "./experience/page";
 
 const titles = [
   "<Software Engineer/>",
-  "<Web Developer/>",
   "<Frontend Engineer/>",
+  "<Web Developer/>",
   "<Web Designer/>",
 ];
 
@@ -189,11 +189,11 @@ export default function Home() {
         <main className="text-white min-h-screen px-4 sm:px-8">
           {/* !!! set gap to like 64 */}
           <section
-            className="relative max-h-[100vh] flex flex-col justify-between gap-[169px]"
+            className="relative min-h-[100vh] flex flex-col justify-between lg:gap-0 md:gap-[270px] gap-[230px]"
             id="home"
           >
             <div className="flex flex-col justify-center">
-              <div className="text-center mt-[39vh] sm:mt-[42vh]">
+              <div className="text-center mt-[42vh]">
                 <h3 className="font-bold text-[18px] sm:text-[28px] md:text-[30px]">
                   Hi, I&apos;m{" "}
                   <span className="text-my-primary">Ifeoluwa Osinuga</span>
@@ -209,7 +209,7 @@ export default function Home() {
 
             {/* CV button */}
 
-            <div className="fixed bottom-2 left-6 z-40">
+            <div className="fixed bottom-5 left-6 z-40">
               <button
                 onClick={handleDownload}
                 className="z-30 flex w-auto px-3 py-2 rounded-full border border-white/20 bg-white/1 backdrop-blur-sm text-white font-semibold transition-all duration-300 ease-in-out hover:shadow-[0_0_12px_#c779dd] hover:border-purple-400/50 active:shadow-[0_0_40px_#c779dd] active:scale-95 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.8)]"
@@ -239,11 +239,9 @@ export default function Home() {
               </a>
             </div> */}
 
-            <div className="flex justify-end h-auto">
-              {/* robot + button */}
-              <div className="sm:mr-6">
-                <FloatingRobot />
-              </div>
+            {/* Robot */}
+            <div className="absolute bottom-6 right-3">
+              <FloatingRobot />
             </div>
           </section>
 

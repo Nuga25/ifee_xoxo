@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import robotSaysHi from "../animations/robot-says-hi.json";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"; // from shadcn/ui
 import { DialogTitle } from "@radix-ui/react-dialog";
+import RagChat from "./RagChat";
 
 export default function FloatingRobot() {
   return (
@@ -42,14 +43,11 @@ export default function FloatingRobot() {
           <DialogTitle>AI chatbox</DialogTitle>
           <h2 className="text-xl font-semibold mb-2">Chat with my AI 🤖</h2>
           <p className="text-sm text-gray-300 mb-4">
-            You can ask questions about me, my projects, or anything on this
-            site.
+            You can ask questions about me, my projects, anything on this site
+            and general questions.
           </p>
 
-          {/* Placeholder for the chat interface */}
-          <div className="h-64 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400">
-            [AI chat will appear here soon...]
-          </div>
+          <RagChat />
         </DialogContent>
       </Dialog>
     </div>

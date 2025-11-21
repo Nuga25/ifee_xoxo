@@ -1,0 +1,32 @@
+[
+  {
+    "id": "about",
+    "title": "About Me",
+    "content": "Ifeoluwa Osinuga is a final-year Computer Science student who enjoys building responsive, user-friendly applications using Next.js, React, TypeScript, and Tailwind CSS. She is fascinated by how technology solves real-world problems and enjoys exploring new tools that push her creativity further. Outside of coding, she loves scrolling through social media or watching Kdramas."
+  },
+  {
+    "id": "skills",
+    "title": "Skills",
+    "content": "React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, HTML, CSS, Git, GitHub, Figma, AWS basics including EC2, Amplify, Cognito, VPC, S3, PostgreSQL, Terraform."
+  },
+  {
+    "id": "education",
+    "title": "Education",
+    "content": "Studying BSc Computer Science at Lagos State University. Expected graduation September 2026. Completed Frontend Engineering program at AltSchool Africa with modules including HTML, CSS, JavaScript, TypeScript, React, Next.js, and accessibility."
+  },
+  {
+    "id": "project_interneefy",
+    "title": "Interneefy Project",
+    "content": "Interneefy is a fullstack internship management system designed to streamline operations for organizations. It includes dashboards for admins, supervisors, and interns. Features include user registration, task assignment, progress tracking, and feedback. Built with Next.js, React, TypeScript, Tailwind CSS, Node.js backend, PostgreSQL, and Prisma ORM."
+  },
+  {
+    "id": "project_todo",
+    "title": "Advanced Todo App",
+    "content": "A responsive web-based task manager built with React, React Router DOM, Tailwind CSS, and Daisy UI. Includes CRUD operations, pagination, external API fetch, and localStorage persistence to maintain user tasks between sessions."
+  },
+  {
+    "id": "career",
+    "title": "Career Goals",
+    "content": "Aiming to become a strong frontend engineer with fullstack capabilities, with interests in cloud engineering, accessible user interfaces, and building scalable applications."
+  }
+]
