@@ -17,120 +17,52 @@
   {
     "id": "story_origin",
     "title": "My Tech Journey",
-    "content": "I started my tech journey fresh out of highschool out of curiosity and a desire to understand how the apps and websites I used every day were built. This led me to apply to study Computer science in the University. During my university years I am building on improving my tech skills, I enrolled in the Frontend Engineering program at AltSchool Africa, where I improved my Frontend skills. As I built more projects, I fell in love with creating interfaces that feel intuitive, responsive, and visually appealing. During my third year of uni, in my second semester, I went for my SIWES(IT) which lasted a period of six months. During my IT period I explored other tech fields and my interest expanded into UI/UX design, cloud engineering and automation, which led me to explore AWS, Terraform, AI/ML and backend concepts during my SIWES internship. Today, I enjoy combining strong frontend skills with backend knowledge to build scalable, real-world applications."
+    "content": "I started my tech journey fresh out of highschool out of curiosity and a desire to understand how the apps and websites I used every day were built. This led me to apply to study Computer Science in the University. During my university years I worked on improving my tech skills and enrolled in the Frontend Engineering program at AltSchool Africa, where I enhanced my frontend skills. As I built more projects, I fell in love with creating interfaces that feel intuitive, responsive, and visually appealing. During my third year of uni, in my second semester, I went for my SIWES internship which lasted six months. During this period, I explored other tech fields and expanded my interests into UI/UX design, cloud engineering, automation, AWS, Terraform, AI/ML, and backend concepts. Today, I enjoy combining strong frontend skills with backend knowledge to build scalable, real-world applications."
   },
   {
     "id": "project_portfolio",
-    "title": "Personal Portfolio Website",
-    "content": "A fully responsive personal portfolio website designed to showcase my projects, experience, and skills. It features smooth animations, reusable components, a clean UI, and optimized routing. Built with modern frontend tools and deployed on Vercel. Serves as the central hub for my online presence.",
-    "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
-    "links": {
-      "live": "https://ifee-xoxo.vercel.app/",
-      "github": "https://github.com/Nuga25/ifee_xoxo"
-    }
+    "title": "Portfolio Website",
+    "content": "A fully responsive personal portfolio website designed to showcase my projects, experience, and skills. It features smooth animations, reusable components, a clean UI, and optimized routing. Built with modern frontend tools and deployed on Vercel. Serves as the central hub for my online presence."
   },
-
   {
     "id": "project_interneefy",
     "title": "Interneefy – Internship Management System",
-    "content": "Interneefy is a full-stack internship management system built as my SIWES project. It streamlines the internship lifecycle for organizations, offering dashboards for admins, supervisors, and interns. Users can register, assign and track tasks, submit reports, and monitor performance. Designed with scalability, clarity, and real-world usability in mind. Ifeoluwa's most notable project.",
-    "tech": [
-      "Next.js",
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Node.js",
-      "PostgreSQL",
-      "Prisma ORM"
-    ],
-    "links": {
-      "live": "https://interneefy-frontend.vercel.app/",
-      "github": "https://github.com/Nuga25/interneefy-frontend"
-    }
+    "content": "Interneefy is a full-stack internship management system built as my SIWES project. It streamlines the internship lifecycle for organizations, offering dashboards for admins, supervisors, and interns. Users can register, assign and track tasks, submit reports, and monitor performance. Designed with scalability, clarity, and real-world usability in mind. Built with Next.js, React.js, TypeScript, Tailwind CSS, Node.js, PostgreSQL, and Prisma ORM."
   },
-
   {
     "id": "project_tictactoe",
     "title": "Tic Tac Toe Game",
-    "content": "A simple and interactive implementation of the classic Tic-Tac-Toe game. Built as part of The Odin Project curriculum, focusing on DOM manipulation, game logic, modular JavaScript patterns, and responsive layout.",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "links": {
-      "live": "https://nuga25.github.io/Tic-Tac-Toe/",
-      "github": "https://github.com/Nuga25/Tic-Tac-Toe"
-    }
+    "content": "A simple and interactive implementation of the classic Tic-Tac-Toe game. Built as part of The Odin Project curriculum, focusing on DOM manipulation, game logic, modular JavaScript patterns, and responsive layout. Built with HTML, CSS, and JavaScript."
   },
-
   {
     "id": "project_todo",
     "title": "Advanced Todo Application",
-    "content": "A feature-rich todo application with CRUD operations, pagination, dynamic routing, and database persistence. Built with a focus on clean structure, component reuse, and modern React patterns.",
-    "tech": [
-      "React.js",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Daisy UI",
-      "Supabase"
-    ],
-    "links": {
-      "live": "https://nuga25.github.io/Todo-List/",
-      "github": "https://github.com/Nuga25/Todo-List"
-    }
+    "content": "A feature-rich todo application with CRUD operations, pagination, dynamic routing, and database persistence. Built with React.js, Next.js, TypeScript, Tailwind CSS, Daisy UI, and Supabase."
   },
-
   {
     "id": "project_etchasketch",
     "title": "Etch A Sketch",
-    "content": "A web-based drawing playground inspired by the classic Etch A Sketch toy. Built as part of The Odin Project curriculum, users can draw on a grid, choose different sizes, and reset the canvas. Built to practice DOM manipulation and event handling.",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "links": {
-      "live": "https://nuga25.github.io/odin-etch-a-sketch-proj/",
-      "github": "https://github.com/Nuga25/odin-etch-a-sketch-proj"
-    }
+    "content": "A web-based drawing playground inspired by the classic Etch A Sketch toy. Built as part of The Odin Project curriculum. Users can draw on a grid, choose different sizes, and reset the canvas. Built with HTML, CSS, and JavaScript."
   },
-
   {
     "id": "project_space_tourism",
     "title": "Space Tourism Website",
-    "content": "A responsive multipage space-themed website built from a Frontend Mentor challenge. Includes navigation between destinations, crew members, and technology pages. Demonstrates advanced layout skills and clean UI design.",
-    "tech": ["TypeScript", "React.js", "Next.js", "Tailwind CSS"],
-    "links": {
-      "live": "https://space-tourism-website-henna.vercel.app/",
-      "github": "https://github.com/Nuga25/space-tourism-website"
-    }
+    "content": "A responsive multipage space-themed website built from a Frontend Mentor challenge. Includes navigation between destinations, crew members, and technology pages. Built with TypeScript, React.js, Next.js, and Tailwind CSS."
   },
-
   {
     "id": "project_loan_dashboard",
     "title": "Loan Dashboard",
-    "content": "A static loan dashboard application that allows users to visualize loan metrics and repayment data. Includes charts, responsive layout, and clean design. Created to practice frontend dashboard UI and chart integrations.",
-    "tech": ["React.js", "Tailwind CSS", "JavaScript", "Chart.js"],
-    "links": {
-      "live": "https://loan-dashboard-rouge.vercel.app/",
-      "github": "https://github.com/Nuga25/loan-dashboard"
-    }
+    "content": "A static loan dashboard application that allows users to visualize loan metrics and repayment data. Includes charts, responsive layout, and clean design. Built with React.js, Tailwind CSS, JavaScript, and Chart.js."
   },
-
   {
     "id": "project_positivus",
     "title": "Positivus Landing Page",
-    "content": "A modern landing page for Positivus, showcasing their services and offerings. Designed with a clean layout, smooth flow, and responsive design. Focuses on frontend layout mastery and aesthetics.",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "links": {
-      "live": "https://positivus-phi-dun.vercel.app/",
-      "github": "https://github.com/Nuga25/Positivus"
-    }
+    "content": "A modern landing page for Positivus, showcasing their services and offerings. Designed with a clean layout, smooth flow, and responsive design. Built with HTML, CSS, and JavaScript."
   },
-
   {
     "id": "project_ecommerce",
     "title": "E-commerce Product Page",
-    "content": "A responsive e-commerce product detail page created from a Frontend Mentor challenge. Includes product gallery, add-to-cart functionality, and clean responsive UI. Built to strengthen TypeScript and component-based design.",
-    "tech": ["React.js", "Tailwind CSS", "TypeScript"],
-    "links": {
-      "live": "https://e-commerce-product-page-gray-gamma.vercel.app/",
-      "github": "https://github.com/Nuga25/E-commerce-product-page"
-    }
+    "content": "A responsive e-commerce product detail page created from a Frontend Mentor challenge. Includes product gallery, add-to-cart functionality, and clean responsive UI. Built with React.js, Tailwind CSS, and TypeScript."
   },
   {
     "id": "career",
@@ -138,38 +70,15 @@
     "content": "Aiming to become a strong software engineer with fullstack capabilities, with interests in AI/ML, accessible user interfaces, and building scalable applications."
   },
   {
-    "experience": [
-      {
-        "year": "2025",
-        "role": "Engineering Intern",
-        "company": "Cecure Intelligence Limited",
-        "company_url": "https://cecureintel.com",
-        "duration": "April 2025 — September 2025 (6 months)",
-        "description": "During my Student Industrial Work Experience Scheme (SIWES), I interned at Cecure Intelligence Limited under the Engineering Department. I rotated through four main domains: frontend engineering, design engineering, cloud engineering, and machine learning/AI. Under the guidance of senior engineers, I gained hands-on experience building secure, scalable, and user-friendly digital solutions.",
-        "highlights": [
-          "Worked across frontend, design, cloud, and ML/AI engineering",
-          "Collaborated with mentors and senior engineers",
-          "Strengthened skills in React, TypeScript, Tailwind CSS, and Figma",
-          "Gained exposure to Terraform and AWS services",
-          "Contributed to documentation and engineering best practices"
-        ],
-        "tech": [
-          "React",
-          "TypeScript",
-          "Tailwind",
-          "Figma",
-          "Terraform",
-          "AWS Services"
-        ]
-      }
-    ]
+    "id": "experience_siwes",
+    "title": "Engineering Intern – Cecure Intelligence Limited",
+    "content": "During my SIWES internship at Cecure Intelligence Limited in the Engineering Department, I rotated through frontend engineering, design engineering, cloud engineering, and machine learning/AI. Mentored by senior engineers, I gained hands-on experience building secure, scalable, and user-friendly digital solutions. Strengthened skills in React, TypeScript, Tailwind CSS, Figma, Terraform, and AWS services. Contributed to documentation and learnt best engineering practices."
   },
   {
     "id": "values",
     "title": "Personality & Work Values",
-    "content": "Ifeoluwa values clean design, reliability, attention to detail, and consistent improvement. She enjoys taking feedback, learning quickly, and asking the right questions. Her work style is organized, curious, and focused—she prefers understanding concepts deeply rather than rushing. She loves building things that are both aesthetically pleasing and technically sound."
+    "content": "Ifeoluwa values clean design, reliability, attention to detail, and consistent improvement. She enjoys taking feedback, learning quickly, and asking the right questions. Her work style is organized, curious, and focused. She loves building things that are both aesthetically pleasing and technically sound."
   },
-
   {
     "id": "fun_facts",
     "title": "Fun Facts",
@@ -178,7 +87,7 @@
   {
     "id": "contact",
     "title": "Contact & Socials",
-    "content": "You can reach me through my portfolio or social platforms. I am open to collaborations, voluntary and paid opportunities, and frontend-focused roles. Feel free to explore more of my work or connect with me online.",
+    "content": "You can reach me through my portfolio or social platforms. I am open to collaborations, voluntary and paid opportunities, and frontend-focused roles.",
     "email": "osinuaifeoluwa1@gmail.com",
     "github": "https://github.com/Nuga25",
     "linkedin": "https://www.linkedin.com/in/osinugaifeoluwa",
