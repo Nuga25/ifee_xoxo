@@ -18,7 +18,7 @@ const ProjectsPage = () => {
       caption: "One of the winners of Upskill with Cardtonic 3.0",
     },
     {
-      src: "/images/idk.jpg",
+      src: "/images/to-come.jpg",
       caption: "Frontend Engineering Certification from Altschool Africa",
     },
   ];
@@ -100,7 +100,7 @@ const ProjectsPage = () => {
                   <ProjectCard
                     title="Portfolio Website"
                     subtitle="A personal portfolio website to showcase my projects and skills."
-                    thumbnail="/images/portfolio.png"
+                    thumbnail="/images/portfolio-project.png"
                     stack="Next.js · TypeScript · Tailwind "
                     liveUrl="https://ifee-xoxo.vercel.app/"
                     githubUrl="https://github.com/Nuga25/ifee_xoxo"

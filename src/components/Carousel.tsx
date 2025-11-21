@@ -118,7 +118,7 @@ export default function Carousel({
               src={slides[imageIndex].src}
               alt={`slide-${imageIndex}`}
               fill
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full bg-my-primary"
               priority
             />
 

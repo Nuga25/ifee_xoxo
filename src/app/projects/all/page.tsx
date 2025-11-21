@@ -1,15 +1,16 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const allProjects = [
   {
     title: "Portfolio Website",
     subtitle:
       "A personal portfolio website to showcase my projects and skills.",
-    thumbnail: "/images/portfolio.png",
+    thumbnail: "/images/portfolio-project.png",
     stack: "Next.js · TypeScript · Tailwind ",
     liveUrl: "https://ifee-xoxo.vercel.app/",
     githubUrl: "https://github.com/Nuga25/ifee_xoxo",
@@ -90,10 +91,41 @@ const allProjects = [
 ];
 
 const AllProjectsPage = () => {
+  const router = useRouter();
+
+  const handleBackClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    // Navigate to home page
+    router.push("/");
+
+    // Try multiple times to find and scroll to the element
+    let attempts = 0;
+    const maxAttempts = 10;
+
+    const scrollInterval = setInterval(() => {
+      const element = document.getElementById("projects");
+
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        clearInterval(scrollInterval); // Stop trying once successful
+      }
+
+      attempts++;
+      if (attempts >= maxAttempts) {
+        clearInterval(scrollInterval); // Give up after 10 attempts
+      }
+    }, 100); // Check every 100ms
+  };
+
   return (
     <section className="px-10 sm:px-32 py-20 bg-bg-dark">
       <div className="mb-8">
-        <Link href="/#projects" className="text-sm text-my-primary underline">
+        <Link
+          href="/#projects"
+          onClick={handleBackClick}
+          className="text-sm text-my-primary underline cursor-pointer"
+        >
           &larr; Back
         </Link>
       </div>

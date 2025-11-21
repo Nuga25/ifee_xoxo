@@ -4,101 +4,97 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function LoadingScreen() {
-  const shouldShow =
-    typeof window !== "undefined"
-      ? !sessionStorage.getItem("hasLoadedBefore")
-      : true;
-
-  const [loading, setLoading] = useState(shouldShow);
+  const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
+  // Synchronously decide if this is the first visit ever
+  const isFirstVisit =
+    typeof window !== "undefined" && !sessionStorage.getItem("hasLoadedBefore");
+
   useEffect(() => {
-    // Don't run if we shouldn't show the loading screen
-    if (!shouldShow) {
-      return;
-    }
+    if (!isLoading) return;
 
-    // Mark that we've loaded (for future navigations)
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem("hasLoadedBefore", "true");
-    }
-    // Simulate progress while page loads
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 90) {
-          clearInterval(progressInterval);
-          return 90; // Stop at 90% until page fully loads
-        }
-        return prev + Math.random() * 15; // Random increments for realistic feel
-      });
-    }, 200);
+    sessionStorage.setItem("hasLoadedBefore", "true");
 
-    // Wait for page to fully load
-    const handleLoad = () => {
-      clearInterval(progressInterval);
+    let finished = false;
+    const finishLoading = () => {
+      if (finished) return;
+      finished = true;
+      clearInterval(interval);
       setProgress(100);
-
-      // Small delay after 100% for smooth exit
-      setTimeout(() => {
-        setLoading(false);
-      }, 400);
+      setTimeout(() => setIsLoading(false), 300);
     };
 
-    // Check if page is already loaded
+    // Smooth fake progress
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 94) {
+          clearInterval(interval);
+          return 94;
+        }
+        return prev + Math.random() * 8 + 6;
+      });
+    }, 140);
+
+    // Respect real load time (great on slow connections)
+    const onLoad = () => finishLoading();
+
     if (document.readyState === "complete") {
-      handleLoad();
+      // tiny minimum delay time so animation isn't skipped entirely
     } else {
-      window.addEventListener("load", handleLoad);
+      window.addEventListener("load", onLoad);
     }
 
     return () => {
-      clearInterval(progressInterval);
-      window.removeEventListener("load", handleLoad);
+      clearInterval(interval);
+      window.removeEventListener("load", onLoad);
     };
-  }, [shouldShow]);
+  }, [isLoading]);
+
+  // Completely skip rendering if it's not the first visit AND we're done loading
+  if (!isFirstVisit && !isLoading) {
+    return null;
+  }
 
   return (
-    <AnimatePresence>
-      {shouldShow && loading && (
+    <AnimatePresence mode="wait">
+      {isLoading && (
         <motion.div
+          key="loader"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-[100] bg-[#0A0A0F] flex flex-col items-center justify-center"
         >
-          {/* Logo or Name */}
+          {/* Logo */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-8"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white">
               <span className="text-purple-500">{"<"}</span>
-              ifee.xoxo
+              ifee_xoxo
               <span className="text-purple-500">{"/>"}</span>
             </h1>
           </motion.div>
 
-          {/* Progress Bar */}
+          {/* Progress Bar + Text */}
           <div className="w-64 md:w-96 h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div
-              animate={{ width: `${Math.min(progress, 100)}%` }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
               className="h-full bg-gradient-to-r from-purple-500 to-purple-400"
+              initial={{ width: "0%" }}
+              animate={{ width: `${Math.min(progress, 100)}%` }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
             />
           </div>
 
-          {/* Percentage */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-white/60 mt-4 text-sm font-mono"
-          >
-            {Math.floor(Math.min(progress, 100))}%
-          </motion.p>
+          <p className="text-white/60 mt-4 text-sm font-mono">
+            {Math.floor(progress)}%
+          </p>
 
-          {/* Animated dots */}
+          {/* Pulsing dots */}
           <motion.div
             animate={{ opacity: [0.3, 1, 0.3] }}
             transition={{ duration: 1.5, repeat: Infinity }}
@@ -109,15 +105,7 @@ export default function LoadingScreen() {
             <div className="w-2 h-2 bg-purple-500 rounded-full" />
           </motion.div>
 
-          {/* Loading text */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-white/40 mt-4 text-xs"
-          >
-            Loading portfolio...
-          </motion.p>
+          <p className="text-white/40 mt-4 text-xs">Loading portfolio...</p>
         </motion.div>
       )}
     </AnimatePresence>
