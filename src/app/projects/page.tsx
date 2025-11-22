@@ -18,6 +18,10 @@ const ProjectsPage = () => {
       caption: "One of the winners of Upskill with Cardtonic 3.0",
     },
     {
+      src: "/images/cil-certificate.jpg",
+      caption: "Internship Completion Certification from CIL",
+    },
+    {
       src: "/images/to-come.jpg",
       caption: "Frontend Engineering Certification from Altschool Africa",
     },
@@ -148,7 +152,10 @@ const ProjectsPage = () => {
                 transition={{ duration: 0.45, ease: "easeInOut" }}
                 className="flex flex-col items-center"
               >
-                <div className="w-full max-w-4xl">
+                <div className="w-full lg:w-[85%] max-w-4xl">
+                  <p className="text-center mx-auto mb-10 font-semibold text-[14px] sm:text-md">
+                    Acievements / Certifications
+                  </p>
                   <Carousel
                     slides={achievements}
                     autoPlay

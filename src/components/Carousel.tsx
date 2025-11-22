@@ -118,13 +118,13 @@ export default function Carousel({
               src={slides[imageIndex].src}
               alt={`slide-${imageIndex}`}
               fill
-              className="object-cover w-full h-full bg-my-primary"
+              className="object-fit w-full h-full bg-my-primary"
               priority
             />
 
             {/* Caption */}
             {slides[imageIndex].caption && (
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 backdrop-blur-sm text-white w-[90%] px-2 py-1 md:px-4 md:py-2 rounded-md text-[7px] md:text-sm text-center">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/10 backdrop-blur-[2px] text-white w-[90%] px-2 py-1 md:px-4 md:py-2 rounded-md text-[7px] md:text-sm text-center">
                 {slides[imageIndex].caption}
               </div>
             )}
