@@ -7,16 +7,26 @@ export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
-  // Synchronously decide if this is the first visit ever
+  // Detect bots
+  const isBot =
+    typeof navigator !== "undefined" &&
+    /bot|crawler|spider|crawling/i.test(navigator.userAgent);
+
+  // Check if first visit
   const isFirstVisit =
     typeof window !== "undefined" && !sessionStorage.getItem("hasLoadedBefore");
 
   useEffect(() => {
-    if (!isLoading) return;
+    if (!isLoading || isBot) {
+      // Defer state update to avoid synchronous setState
+      setTimeout(() => setIsLoading(false), 0);
+      return;
+    }
 
     sessionStorage.setItem("hasLoadedBefore", "true");
 
     let finished = false;
+
     const finishLoading = () => {
       if (finished) return;
       finished = true;
@@ -25,7 +35,6 @@ export default function LoadingScreen() {
       setTimeout(() => setIsLoading(false), 300);
     };
 
-    // Smooth fake progress
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 94) {
@@ -36,7 +45,6 @@ export default function LoadingScreen() {
       });
     }, 140);
 
-    // Respect real load time
     const onLoad = () => finishLoading();
 
     if (document.readyState === "complete") {
@@ -49,10 +57,10 @@ export default function LoadingScreen() {
       clearInterval(interval);
       window.removeEventListener("load", onLoad);
     };
-  }, [isLoading]);
+  }, [isLoading, isBot]);
 
-  // Completely skip rendering if it's not the first visit and site is done loading
-  if (!isFirstVisit && !isLoading) {
+  if (isBot || (!isFirstVisit && !isLoading)) {
+    // Render nothing for bots or repeat visitors
     return null;
   }
 
@@ -79,7 +87,6 @@ export default function LoadingScreen() {
             </h1>
           </motion.div>
 
-          {/* Progress Bar + Text */}
           <div className="w-64 md:w-96 h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div
               className="h-full bg-gradient-to-r from-purple-500 to-purple-400"
@@ -93,7 +100,6 @@ export default function LoadingScreen() {
             {Math.floor(progress)}%
           </p>
 
-          {/* Pulsing dots */}
           <motion.div
             animate={{ opacity: [0.3, 1, 0.3] }}
             transition={{ duration: 1.5, repeat: Infinity }}
@@ -110,4 +116,3 @@ export default function LoadingScreen() {
     </AnimatePresence>
   );
 }
-

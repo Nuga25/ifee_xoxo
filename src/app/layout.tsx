@@ -7,8 +7,35 @@ import LoadingScreen from "@/components/LoadingScreen";
 const firaCode = Fira_Code({ subsets: ["latin"], weight: ["300", "700"] });
 
 export const metadata: Metadata = {
-  title: "ifee_xoxo",
-  description: "Showcasing my work",
+  title: "Ifeoluwa Osinuga | Frontend Engineer",
+  description:
+    "Portfolio of Ifeoluwa Osinuga, a Frontend Engineer skilled in React, Next.js, TypeScript, Tailwind CSS, UI/UX and cloud-based integrations.",
+  metadataBase: new URL("https://ifee-xoxo.vercel.app"),
+  keywords: [
+    "Ifeoluwa Osinuga",
+    "Osinuga Ifeoluwa",
+    "Ifeoluwa frontend developer",
+    "React developer Nigeria",
+    "Next.js portfolio",
+    "Website developer",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Ifeoluwa Osinuga" }],
+  openGraph: {
+    title: "Ifeoluwa Osinuga | Frontend Engineer",
+    description:
+      "Showcasing projects in React, Next.js, TypeScript, and full-stack development.",
+    url: "https://ifee-xoxo.vercel.app",
+    siteName: "Ifeoluwa Osinuga Portfolio",
+    images: ["/images/portfolio-project.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ifeoluwa Osinuga Portfolio",
+    description:
+      "Frontend Engineer | React | Next.js | TypeScript | Tailwind CSS",
+    images: ["/images/portfolio-project.png"],
+  },
 };
 
 export default function RootLayout({
@@ -18,6 +45,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ifeoluwa Osinuga",
+              jobTitle: "Frontend Engineer",
+              description:
+                "Frontend Engineer skilled in React, Next.js, TypeScript, UI/UX Design, and building modern web experiences.",
+              url: "https://ifee-xoxo.vercel.app",
+              sameAs: [
+                "https://github.com/Nuga25",
+                "https://www.linkedin.com/in/osinugaifeoluwa",
+                "https://x.com/ifee_xoxo",
+                "https://instagram.com/_osinugaifeoluwa_",
+              ],
+            }),
+          }}
+        />
+        ;
+      </head>
       <body className={firaCode.className}>
         <LoadingScreen />
         {children}

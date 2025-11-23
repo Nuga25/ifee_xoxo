@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ifee-xoxo.vercel.app/sitemap.xml

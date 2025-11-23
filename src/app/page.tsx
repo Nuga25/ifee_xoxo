@@ -212,7 +212,10 @@ export default function Home() {
         </header>
 
         <main className="text-white min-h-screen px-4 sm:px-8">
-          {/* !!! set gap to like 64 */}
+          {/* SEO boost */}
+          <h1 className="sr-only">Ifeoluwa Osinuga Portfolio</h1>
+
+          {/* home page */}
           <section
             className="relative min-h-[100vh] flex flex-col justify-between lg:gap-0 md:gap-[270px] gap-[230px]"
             id="home"
