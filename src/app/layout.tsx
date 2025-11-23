@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import LoadingScreen from "@/components/LoadingScreen";
 
 const firaCode = Fira_Code({ subsets: ["latin"], weight: ["300", "700"] });
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={firaCode.className}>
         <LoadingScreen />
         {children}
+        <Analytics />
       </body>
     </html>
   );
