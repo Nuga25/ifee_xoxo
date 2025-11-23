@@ -2,13 +2,12 @@
 
 import Lottie from "lottie-react";
 import robotSaysHi from "../animations/robot-says-hi.json";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"; // from shadcn/ui
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import RagChat from "./RagChat";
 
 export default function FloatingRobot() {
   return (
-    // fixed bottom-6 right-6
     <div className="flex flex-col items-center gap-3 z-50">
       {/* Dialog trigger */}
       <Dialog>
@@ -53,3 +52,4 @@ export default function FloatingRobot() {
     </div>
   );
 }
+

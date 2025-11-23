@@ -36,7 +36,7 @@ export default function LoadingScreen() {
       });
     }, 140);
 
-    // Respect real load time (great on slow connections)
+    // Respect real load time
     const onLoad = () => finishLoading();
 
     if (document.readyState === "complete") {
@@ -51,7 +51,7 @@ export default function LoadingScreen() {
     };
   }, [isLoading]);
 
-  // Completely skip rendering if it's not the first visit AND we're done loading
+  // Completely skip rendering if it's not the first visit and site is done loading
   if (!isFirstVisit && !isLoading) {
     return null;
   }
@@ -110,3 +110,4 @@ export default function LoadingScreen() {
     </AnimatePresence>
   );
 }
+

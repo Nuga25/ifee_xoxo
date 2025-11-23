@@ -32,7 +32,7 @@ export default function RagChat() {
     setInput("");
     setLoading(true);
 
-    // Add an empty bot message that we'll update as we stream
+    // Adds an empty bot message that updates as streaming happens
     setMessages((prev) => [...prev, { sender: "bot", text: "" }]);
 
     try {
@@ -156,3 +156,4 @@ export default function RagChat() {
     </div>
   );
 }
+

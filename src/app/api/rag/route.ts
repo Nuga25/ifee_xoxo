@@ -34,13 +34,13 @@ export async function POST(req: Request) {
       });
     }
 
-    // Search for relevant context in your portfolio data
+    // Search for relevant context in portfolio data
     const relevantContext = findRelevantContext(query);
 
     // Build the prompt
     const prompt = buildPrompt(query, relevantContext);
 
-    // Use Gemini 2.5 Flash with streaming
+    // Gemini 2.5 Flash model with streaming
     const modelName = "gemini-2.5-flash";
     const apiUrl = `https://generativelanguage.googleapis.com/v1/models/${modelName}:streamGenerateContent?alt=sse&key=${apiKey}`;
 
@@ -95,7 +95,7 @@ export async function POST(req: Request) {
 
             for (const line of lines) {
               if (line.startsWith("data: ")) {
-                const jsonStr = line.slice(6); // Remove "data: " prefix
+                const jsonStr = line.slice(6);
 
                 if (jsonStr.trim() === "") continue;
 
@@ -201,3 +201,4 @@ Instructions:
 Answer:`;
   }
 }
+
